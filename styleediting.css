@@ -1,0 +1,306 @@
+#mainContent{
+    background: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 21px;
+}
+.top-up-with-ping-header {
+    float: left;
+    margin: 8px 0 12px 10px;
+    height: 32px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+.bluefish-container .clear {
+    clear: both;
+}
+.form-section-heading {
+    padding: 0px 6px;
+    margin: 13px 10px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    font-weight: bold;
+}
+.running-total dt{
+    float: left;
+    font-weight: normal;
+}
+.running-total dd, .running-subtotal dd {
+    text-align: right;
+    float: right;
+}
+.bluefish-container .bp-logo-container {
+    
+    clear: both;
+     overflow: auto;
+}
+.running-total, .running-subtotal {
+    margin: 14px 10px 15px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+.field-row .field {
+    float: none;
+    padding: 0 9px;
+    margin: 0 1px 10px;
+}
+.top-up-with-ping-amount-container .top-up-with-ping-input {
+    
+    margin-left: 4px;
+}
+.bluefish-container .blueFish-running-total {
+    padding: 0px 6px;
+    font-weight: normal;
+    margin-left: 0;
+    margin-right: 5px;
+}
+.trade-me-account-credit-info-box {
+    border-width: 2px 2px 2px 8px;
+    border-color: #148fe2;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 15px 10px 13px 10px;
+}
+.old-box.panel, .panel.sidebar-widget {
+    border: 1px solid #ebebeb;
+    background-color: #fbfbfb;
+    -moz-border-radius: 3.01px;
+    -webkit-border-radius: 3.01px;
+    border-radius: 3.01px;
+    margin-bottom: 20px;
+}
+.old-box.panel, .panel.sidebar-widget {
+    border: 1px solid #ebebeb;
+    background-color: #fbfbfb;
+    -moz-border-radius: 3.01px;
+    -webkit-border-radius: 3.01px;
+    border-radius: 3.01px;
+    margin-bottom: 20px;
+}
+.bluefish-container .tabs-header-content-container .tabs-payment-method-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    display: block;
+}
+.bluefish-container .bluefish-accordion-container .bluefish-box-header-title, .bluefish-container .bluefish-accordion-container .deferred-payment-box-header-title, .bluefish-container .bluefish-accordion-container .other-means-header-title {
+    font-size: 13px;
+    left: 46px;
+    top: 4px;
+    color: #999;
+    padding-top: 5px;
+    line-height: 1.3;
+}
+.bluefish-container .accordion-box.selected {
+    padding: 0px 15px;
+    margin-top: 0;
+    border-width: 2px;
+    border-color: #85807c;
+}
+.bluefish-container .tabs-header-content-container {
+    margin: 15px 20px 15px 20px;
+    position: relative;
+}
+.old-box, .sidebar-widget {
+    margin: 10px;
+}
+.manage-ping .ping-base-button.ping-main-button {
+    background-color: #1083ff;
+    border: none;
+    border-bottom: 2px solid #3b71dc;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    background: #1083ff;
+    box-shadow: 0 2px 0 0 #0965c6;
+    border-radius: 5px;
+    text-align: center;
+}
+.bluefish-container .bluefish-accordion-container span {
+    display: inline-block;
+}
+.bluefish-container .funding-source-summary-container {
+    margin-top: 10px;
+}
+.bluefish-container .blueFish-funding-source-summary {
+    display: inline-block;
+    height: 19px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+.bluefish-container .bluefish-add-funding-source-types:hover {
+    background-color: #f8f8f8;
+    
+}
+.bluefish-container .full-separator {
+    border-bottom: 1px #ebebeb solid;
+}
+
+.bluefish-container .add-icon-container {
+    height: 30px;
+    width: 45px;
+}
+.bluefish-container .mini-card-icon {
+    padding-top: 2px;
+    padding-left: 2px;
+    float: right;
+    padding-right: 5px;
+}
+.bluefish-container .blueFish-funding-source-summary {
+    display: inline-block;
+    height: 19px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.bluefish-container .bluefish-add-funding-source-types {
+    padding: 6px 20px 15px 20px;
+    cursor: pointer;
+    color: #06c;
+    font-weight: 500;
+}
+.bluefish-container .accordion-box {
+    position: relative;
+    clear: both;
+    margin-right: 2px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    -moz-border-radius: 3.01px;
+    -webkit-border-radius: 3.01px;
+    border-radius: 4px;
+    padding: 2px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.bluefish-container .available-funding-source:hover, .bluefish-container .available-funding-source.selected {
+    background-color: #f8f8f8;
+}
+.bluefish-container .available-funding-source.payment-flow {
+    height: 60px;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bluefish-container .available-funding-source {
+    height: 55px;
+    position: relative;
+    padding-left: 12px;
+    margin: 10px auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    cursor: pointer;
+    color: #555;
+}
+.bluefish-container .available-funding-sources-list {
+    max-height: 192px;
+    overflow: hidden;
+    transition: max-height .5s linear;
+    
+}
+.bluefish-container .funding-source-radio-button {
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    width: 40px;
+    
+    margin-left: 30px;
+}
+.field-row .field-inline {
+    float: left;
+}
+.bluefish-container .funding-source-icon-container {
+    margin-top: 9px;
+    margin-right: 16px;
+}
+.bluefish-container .blueFish-funding-source-icon.visa-card-icon {
+    background: url(visa.svg) no-repeat center center;
+}
+.bluefish-container .blueFish-funding-source-icon {
+    width: 36px;
+    height: 25px;
+}
+.bluefish-container .content-wrapper .available-funding-sources-container .funding-source-details-container.payment-flow {
+    width: 100%;
+}
+.bluefish-container .field-row .funding-source-text {
+    margin-top: 3px;
+    float: left;
+    width: 245px;
+}
+.bluefish-container .funding-source-card-sub-text {
+    font-size: 12px;
+    color: #a1a1a1;
+    letter-spacing: .92px;
+    display: block;
+    line-height: 14px;
+}
+.bluefish-container .field-row .funding-source-amount {
+    float: right;
+    margin: 3px 70px;
+    font-size: 14px;
+    text-align: right;
+    padding: 0;
+}
+.bluefish-container .options-icon {
+    background: url(pay.svg) no-repeat center center;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    padding-left: 10px;
+    right: 0;
+    top: 0;
+    float: right;
+    opacity: .5;
+}
+.bluefish-container .options-icon:hover {
+    background: url(other-pay.svg) no-repeat center center;
+    opacity: 1;
+}
+.bluefish-container .card-generic-add-icon {
+    background: url(card.svg) no-repeat center center;
+    width: 36px;
+    height: 25px;
+}
+.bluefish-container .field-row.tabs-container-wrapper {
+    padding: 0px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+.bluefish-container .tabs-header-content-container .blueFish-tab-header-icon {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: text-top;
+    margin-right: 0;
+    top: 5px;
+}
+.bluefish-container .tabs-header-content-container .blueFish-tab-header-icon span {
+    vertical-align: top;
+    margin-left: 5px;
+    line-height: 21px;
+}
+.bluefish-container .tabs-header-content-container .blueFish-tab-header-icon img {
+    width: 45px;
+    height: 24px;
+}

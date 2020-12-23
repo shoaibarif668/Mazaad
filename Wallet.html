@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Malqaa</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets of Mazad Last Updated 30-12-2019 -->
+    <link href="styling.css" rel="stylesheet">
+    <link href="styleediting.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/app.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/main-style.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/main.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/jquery.steps.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/chosen.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/bootstrap-select.css">
+    <link rel="stylesheet" href="./Malqaa_files/loading.min.css">
+    <link href="./Malqaa_files/flag-icon.min.css" rel="stylesheet">
+    <script src="./Malqaa_files/sdk.js.download" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Malqaa_files/sdk.js(1).download"></script><script src="./Malqaa_files/siteurl.js.download"></script>
+    <!-- stylesheets end here -->
+    <!-- jquery -->
+    <script src="./Malqaa_files/jquery.js.download"></script>
+    <!-- jquery -->
+    <script>
+
+       function check() {
+               
+              var RevokeToken = localStorage.getItem('refToken');
+               var encodeToken = encodeURIComponent(RevokeToken);
+                   $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                       url: siteurl + '/v1/Accounts/RevokeToken?token=' + encodeToken,
+
+                success: function (result) {
+                    if (result.status_code == 200)
+                    {
+                        localStorage.removeItem('refToken');
+                        localStorage.removeItem('loggedIn');
+                        window.location.href = '/Accounts/Logout';
+                    }
+                    else if (result.status_code == 404)
+                    {
+                        localStorage.removeItem('loggedIn');
+                        localStorage.removeItem('refToken');
+                        window.location.href = '/Accounts/Logout';
+                    }
+                    else
+                    {
+                        localStorage.removeItem('loggedIn');
+                        localStorage.removeItem('refToken');
+                        window.location.href = '/Accounts/Logout';
+                    }
+                },
+                error: function (xhr, status)
+                {
+                     
+                     localStorage.removeItem('refToken');
+                     window.location.href = '/Accounts/Login';
+                }
+            });
+           return false;
+       }
+    </script>
+    <style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body>
+    <div class="loader" style="display: none;"></div>
+
+
+    <!-- header start from here -->
+
+    <header>
+
+        <!-- header top start from here -->
+
+        <section class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3">
+                        <div class="header-left-language-switcher">
+
+                                <div class="arabic-language" data-lang="ar"><span>  العربية</span></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-9">
+                        <div class="header-right-menu text-right">
+                           
+                            <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="http://dev.malqaa.com/Accounts/Register"><span class="register-icon"></span> Register</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="http://dev.malqaa.com/Accounts/Login"><span class="login-icon"></span> Login</a>
+                                    </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- header top end here -->
+        <!-- header bottom start from here -->
+        <section id="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- theme-logo -->
+                        <div class="theme-logo">
+                            <a href="http://dev.malqaa.com/"><img src="./Malqaa_files/logo.png"></a>
+                        </div>
+                        <!-- theme logo end here -->
+                    </div>
+                    <div class="col-md-9">
+                        <div class="home-main-heading">
+                            <h1>Hello, what can we help you find?</h1>
+                        </div>
+                        <!-- header bottom right area -->
+                        <!--<div class="header-bottom-right-menu text-right">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#"><span class="watchlist-icon"></span> Watchlist</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#"><span class="listview-icon"></span> List an item</a>
+
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#"><span class="profile-icon"></span> My Profile</a>
+                                    <ul class="sub-menu" >
+                                        <li>
+                                            <a href="#"> <span class="watchlist-icon"></span> Wishlist</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <div class="cart">
+                                            <img src="~/assets/image/cart-icon.png"/>
+                                            <span class="total-cart-item">1</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                        <!-- header bottom right area end here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- header botton end here -->
+
+
+    </header>
+
+    <!-- header end here -->
+
+
+    <main class="content">
+        <div class="toast__container" style="display:none;">
+    <div class="toast__cell">
+        <div class="toast toast--green">
+            <div class="toast__icon">
+                <svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g><g><path d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0    c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7    C514.5,101.703,514.499,85.494,504.502,75.496z"></path>
+	</g></g>
+    </svg>
+            </div>
+            <div class="toast__content">
+                <p class="toast__type">Success</p>
+                <p class="toast__message">User WatchList Updated</p>
+            </div>
+            <div class="toast__close">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+                    <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- search box start from here -->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<section id="homepage-category-search-box-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <div class="homepage-search-box-wrapper">
+                    <div class="homepage-category-search-form">
+                        <form method="GET" action="http://dev.malqaa.com/Advertisement/Listing">
+                            <div class="form-group">
+                                <input name="query" type="text" placeholder="Search" class="form-control" value="">
+                                <div class="dropdown bootstrap-select form-control"><select name="category" data-size="8" class="selectpicker form-control" id="number2" title="Select Category" data-hide-disabled="true" tabindex="-98"><option class="bs-title-option" value=""></option>
+                                    <option hidden="" selected="" value="All">in all categories.</option>
+
+                                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="button" data-id="number2" title="in all categories."><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">in all categories.</div></div> </div></button><div class="dropdown-menu " role="combobox"><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1"><ul class="dropdown-menu inner show"></ul></div></div></div>
+
+                                <!--<select>
+                                    <option>in all categories</option>
+                                    <option>category 1</option>
+                                    <option>category 2</option>
+                                    <option>category 3</option>
+                                </select>-->
+                                <input type="submit" class="homepagebtn" value="Search">
+                                <span class="search-icon"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" style="padding-left: 0px">
+                <!-- header bottom right area -->
+                <div class="header-bottom-right-menu ">
+                    <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="http://dev.malqaa.com/Accounts/Login"><span class="listview-icon menu-icon"></span> List an item</a>
+                                </li>
+                        <li class="list-inline-item has-item">
+
+                                    <a href="http://dev.malqaa.com/Accounts/Login"><span class="profile-icon menu-icon"></span> My Profile</a>
+                        </li>
+                                <li class="list-inline-item">
+                                    <a href="http://dev.malqaa.com/Accounts/Login">
+                                        <div class="cart">
+                                            <img src="./Malqaa_files/smart-cart.png">
+                                        </div>
+                                    </a>
+                                </li>                                
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- search box end here -->
+<!-- inner pages breadcrumbs -->
+
+<!-- inner pages breadcrumbs end here -->
+<!-- Product detail section -->
+
+<section id="breadcrumbs-detailpage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="detail-breadcrumbs-wrapper">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Trade Me Motors </a></li>
+                        <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Used Cars </a></li>
+                        <li class="list-inline-item">Toyota</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="Product-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-detail-info-wrapper">
+                    <div class="row">
+                        <div class="col-md-8 brdr-right padding-right-0">
+                            <div class="product-detail-info-sec-left">
+                                <div class="product-detail-left-section">
+
+
+                                    <!-- Edited malqaa section Start -->
+                                    <div id="mainContent" class="content wideContent">
+                                        <div id="mainContent" class="bluefish-container manage-ping">
+                                           <div class="manage-ping-main-container top-up-container">
+                                              <div>
+                                                 <div class="top-up-with-ping-header">Credit my Trade Me account</div>
+                                                 <div class="clear"></div>
+                                              </div>
+                                              <div class="trade-me-account-credit-info-box">
+                                                 Trade Me credit is used for listing fees and success fees. Funds in your Trade Me account can't be used to pay for items you've bought.
+                                                 <a href="https://help.trademe.co.nz/hc/en-us/articles/360007264391-Trade-Me-account" target="_blank">
+                                                 Learn more
+                                                 </a>
+                                              </div>
+                                              <form name="topUpWithPingForm" method="post" action="TopUpWithPing.aspx" id="topUpWithPingForm">
+                                                 <div>
+                                                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwODgyMTMwNjVkZN3wNGqleQQ3tYOZq4tdmWg5a1ul">
+                                                 </div>
+                                                 <div>
+                                                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="45E8991C">
+                                                 </div>
+                                                 <div class="old-box panel" style="padding: 19px;">
+                                                    <p>Current balance: $0.00</p>
+                                                    <div class="top-up-with-ping-amount-container">
+                                                       <span class="top-up-with-ping-text">Top up amount $</span>
+                                                       <input class="top-up-with-ping-input" type="number" step="0.01" min="1" name="topUpAmount" >
+                                                       <div class="clear"></div>
+                                                       <p class="top-up-with-ping-invalid" style="display: none;" >Invalid top up amount</p>
+                                                    </div>
+                                                 </div>
+                                                 <input type="hidden" name="tkn" >
+                                                 <div class="old-box panel">
+                                                    <div data-bind="template:{name:'trademe-top-up-payment-template'}">
+                                                       <div class="bluefish-container bd">
+                                                          <h2 class="form-section-heading">Payment</h2>
+                                                          <div class="field-row">
+                                                             <div class="field">
+                                                                <dl class="running-total blueFish-running-total">
+                                                                   <dt>Trade Me balance top up</dt>
+                                                                   <dd >$1.00</dd>
+                                                                </dl>
+                                                             </div>
+                                                          </div>
+                                                          <hr>
+                                                          <div class="bp-logo-container">
+                                                             <h2 class="form-section-heading">How would you like to pay?</h2>
+                                                          </div>
+                                                          <div class="field-row tabs-container-wrapper">
+                                                             <div class="bluefish-accordion-container">
+                                                                <div id="pay-by-blueFish" class="accordion-box selected" >
+                                                                   <div class="tabs-header-content-container">
+                                                                      <div class="blueFish-tab-header-icon">
+                                                                         <img src="ping-logo.png" alt="Ping">
+                                                                         <span>instant payments</span>
+                                                                      </div>
+                                                                      <div class="bluefish-tab-header-title selected" >
+                                                                         <div class="bluefish-box-header-title" style="display: none;">
+                                                                            Credit, debit, bank account or Ping balance
+                                                                            <img src="/Images/Payments/ping-disabled@2x.png" alt="ping" class="disabled-logo">
+                                                                         </div>
+                                                                      </div>
+                                                                      <div class="clear"></div>
+                                                                   </div>
+                                                                   <div class="bluefish-accordion-panel selected">
+                                                                      <div >
+                                                                         <div class="content-wrapper selected" id="blueFish-content">
+                                                                            <div >
+                                                                               <div class="available-funding-sources-container"></div>
+                                                                               <div class="available-funding-sources-container">
+                                                                                  <div class="available-funding-sources-list">
+                                                                                     <div >
+                                                                                        <div >
+                                                                                           <div >
+                                                                                              <div class="available-funding-source payment-flow selected" >
+                                                                                                 <div class="funding-source-radio-button">
+                                                                                                    <input type="radio" checked="true">
+                                                                                                    <label ></label>
+                                                                                                    <span class="funding-source-radio-button-checkmark"></span>
+                                                                                                 </div>
+                                                                                                 <div class="field-inline funding-source-icon-container">
+                                                                                                    <span class="blueFish-icon blueFish-funding-source-icon visa-card-icon"></span>
+                                                                                                 </div>
+                                                                                                 <div class="funding-source-details-container no-border payment-flow">
+                                                                                                    <div class="field-inline selectable-link list funding-source-text">
+                                                                                                       <div class="field-row">
+                                                                                                          <span class="card-top-label" >Visa</span>
+                                                                                                          <div class="blueFish-icon blueFish-new-icon" style="display: none;"></div>
+                                                                                                       </div>
+                                                                                                       <span class="funding-source-card-sub-text">•••• •••• •••• 6746</span>
+                                                                                                    </div>
+                                                                                                    <div class="field-row field funding-source-amount">
+                                                                                                       <span class="inline-block" >$1.00</span>
+                                                                                                       <span class="options-icon" ></span>
+                                                                                                    </div>
+                                                                                                 </div>
+                                                                                              </div>
+                                                                                           </div>
+                                                                                           <div style="display: none;">
+                                                                                              <div >
+                                                                                                 <div class="available-funding-source payment-flow" >
+                                                                                                    <div class="funding-source-radio-button">
+                                                                                                       <input type="radio" id="6709999" checked="true">
+                                                                                                       <label ></label>
+                                                                                                       <span class="funding-source-radio-button-checkmark"></span>
+                                                                                                    </div>
+                                                                                                    <div class="field-inline funding-source-icon-container">
+                                                                                                       <span class="blueFish-icon blueFish-funding-source-icon visa-card-icon"></span>
+                                                                                                    </div>
+                                                                                                    <div class="funding-source-details-container no-border payment-flow">
+                                                                                                       <div class="field-inline selectable-link funding-source-text">
+                                                                                                          <div class="field-row">
+                                                                                                             <span class="card-top-label" >Visa</span>
+                                                                                                             <div class="blueFish-icon blueFish-new-icon" style="display: none;"></div>
+                                                                                                          </div>
+                                                                                                          <span class="funding-source-card-sub-text">•••• •••• •••• 6746</span>
+                                                                                                       </div>
+                                                                                                       <div class="field-row funding-source-delete" >
+                                                                                                          <span class="inline-block new-fund-source-field-icon delete-icon-right selectable-link"></span>
+                                                                                                          <span class="warning-text">Delete</span>
+                                                                                                       </div>
+                                                                                                       <div class="field-row funding-source-amount">
+                                                                                                          <span class="options-icon"></span>
+                                                                                                       </div>
+                                                                                                    </div>
+                                                                                                 </div>
+                                                                                              </div>
+                                                                                              <div style="display: none;">
+                                                                                                 <div class="available-funding-source payment-flow">
+                                                                                                    <div class="funding-source-radio-button">
+                                                                                                       <input type="radio"id="6709999" checked="true">
+                                                                                                       <label ></label>
+                                                                                                       <span class="funding-source-radio-button-checkmark"></span>
+                                                                                                    </div>
+                                                                                                    <div class="field-inline funding-source-icon-container">
+                                                                                                       <span class="blueFish-icon blueFish-funding-source-icon visa-card-icon"></span>
+                                                                                                    </div>
+                                                                                                    <div class="funding-source-details-container no-border">
+                                                                                                       <div class="field-inline selectable-link funding-source-confirm-delete-text">
+                                                                                                          <div class="field-row">
+                                                                                                             <label class="card-top-label" >Delete card from Ping?</label>
+                                                                                                          </div>
+                                                                                                          <span class="funding-source-delete-sub-text">This card will no longer be available.</span>
+                                                                                                       </div>
+                                                                                                       <div class="field-row funding-source-delete-confirm">
+                                                                                                          <div class="field-right funding-source-button">
+                                                                                                             <button  class="delete-fund-source-button" disabled="">Delete</button>
+                                                                                                          </div>
+                                                                                                          <div class="field-right funding-source-button">
+                                                                                                             <button class="cancel-button">Cancel</button>
+                                                                                                          </div>
+                                                                                                       </div>
+                                                                                                    </div>
+                                                                                                 </div>
+                                                                                              </div>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                        <div class="full-separator"></div>
+                                                                                     </div>
+                                                                                  </div>
+                                                                                  <div class="show-more-container" style="display: none;">
+                                                                                     <div class="inline-block action-text">
+                                                                                        Show more
+                                                                                     </div>
+                                                                                  </div>
+                                                                                  <div >
+                                                                                     <div class="bluefish-add-funding-source-types add-new-fund-source" id="add-credit-card">
+                                                                                        <div class="field-row">
+                                                                                           <div class="field-inline add-icon-container">
+                                                                                              <span class="blueFish-icon card-generic-add-icon"></span>
+                                                                                           </div>
+                                                                                           <div class="funding-source-summary-container">
+                                                                                              <span class="blueFish-funding-source-summary" >Use another card
+                                                                                              </span>
+                                                                                              <span class="blueFish-funding-source-summary" style="display: none;">Use a new card
+                                                                                              </span>
+                                                                                              <span class="mini-card-icon">
+                                                                                              <img src="amex-mini.svg" alt="American Express">
+                                                                                              <img src="visa-mini.svg" alt="Visa">
+                                                                                              <img src="mastercard-mini.svg" alt="MasterCard">
+                                                                                              <img src="qcard-mini.svg" alt="QCard">
+                                                                                              </span>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                     <div class="bluefish-add-funding-source-types" id="add-bank-account" style="display: none;">
+                                                                                        <div class="field-row">
+                                                                                           <div class="field-inline add-icon-container">
+                                                                                              <span class="blueFish-icon bank-generic-add-icon"></span>
+                                                                                           </div>
+                                                                                           <div class="beta-icon-container">
+                                                                                              <span class="blueFish-icon beta-icon"></span>
+                                                                                           </div>
+                                                                                           <div class="funding-source-summary-container payment-flow">
+                                                                                              <div class="blueFish-funding-source-summary">
+                                                                                                 Bank Connect
+                                                                                                 <div class="bank-connect-icons" ></div>
+                                                                                              </div>
+                                                                                              <p class="bank-connect-text">Instant payments directly from your bank account.</p>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                  </div>
+                                                                                  <div style="display: none;">
+                                                                                     <div class="field-row funding-source-details-remaining-amount">
+                                                                                        <div class="field-inline funding-source-details-top-label-container">
+                                                                                           <span class="top-label funding-source-details-top-label no-logo-funding-source-title" >Choose how to pay the remaining amount:</span>
+                                                                                           <span class="top-label funding-source-details-top-label no-logo-funding-source-title" style="display: none;">Choose how to pay the amount:</span>
+                                                                                        </div>
+                                                                                        <div class="field funding-source-amount remaining-total">
+                                                                                           <span class="inline-block" >$1.00</span>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                     <div >
+                                                                                        <div class="bluefish-add-funding-source-types add-new-fund-source" id="add-credit-card">
+                                                                                           <div class="field-row">
+                                                                                              <div class="field-inline add-icon-container">
+                                                                                                 <span class="blueFish-icon card-generic-add-icon"></span>
+                                                                                              </div>
+                                                                                              <div class="funding-source-summary-container">
+                                                                                                 <span class="blueFish-funding-source-summary" >Use another card
+                                                                                                 </span>
+                                                                                                 <span class="blueFish-funding-source-summary" style="display: none;">Use a new card
+                                                                                                 </span>
+                                                                                                 <span class="mini-card-icon">
+                                                                                                 <img src="/Images/Payments/PaymentCards/amex-mini.svg" alt="American Express">
+                                                                                                 <img src="/Images/Payments/PaymentCards/visa-mini.svg" alt="Visa">
+                                                                                                 <img src="/Images/Payments/PaymentCards/mastercard-mini.svg" alt="MasterCard">
+                                                                                                 <img src="/Images/Payments/PaymentCards/qcard-mini.svg" alt="QCard">
+                                                                                                 </span>
+                                                                                              </div>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                        <div class="bluefish-add-funding-source-types" style="display: none;">
+                                                                                           <div class="field-row">
+                                                                                              <div class="field-inline add-icon-container">
+                                                                                                 <span class="blueFish-icon bank-generic-add-icon"></span>
+                                                                                              </div>
+                                                                                              <div class="beta-icon-container">
+                                                                                                 <span class="blueFish-icon beta-icon"></span>
+                                                                                              </div>
+                                                                                              <div class="funding-source-summary-container payment-flow">
+                                                                                                 <div class="blueFish-funding-source-summary">
+                                                                                                    Bank Connect
+                                                                                                    <div class="bank-connect-icons" data-bind="foreach: availableOpenBank"></div>
+                                                                                                 </div>
+                                                                                                 <p class="bank-connect-text">Instant payments directly from your bank account.</p>
+                                                                                              </div>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                  </div>
+                                                                               </div>
+                                                                            </div>
+                                                                            <div class="field-row" style="display: none;">
+                                                                               <div class="field-row">
+                                                                                  <div id="bf-ba-wrapper">
+                                                                                     <div class="no-script bluefish-verify-bank-account-container">
+                                                                                        <div class="verify-row">
+                                                                                           <h3>Verify bank account</h3>
+                                                                                           <div>
+                                                                                              <p>Verify your <span data-bind="text: getVerifyAccountLabel">bank</span> Account with the code in your bank statement.</p>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                        <div class="verify-row">
+                                                                                           <div class="smaller-text">
+                                                                                              You'll find the verification code in the details of a <b>$0.01 deposit</b> we made to your bank account<span >.</span>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                        <div class="verify-row">
+                                                                                           <img src="/Images/Payments/bank-statement-verification-code-example-v2.svg" alt="Ping verification code example">
+                                                                                        </div>
+                                                                                        <div class="verify-row">
+                                                                                           <div class="verify-bank-account-label">
+                                                                                              <label class="fund-source-input-label">Verification code:</label>
+                                                                                           </div>
+                                                                                           <div class="verify-bank-account-input">
+                                                                                              <div class="new-fund-source-input-container">
+                                                                                                 <input id="verify-bank-account-code"  maxlength="4" type="text" name="verifyCode" autocomplete="off" placeholder="●●●●">
+                                                                                              </div>
+                                                                                           </div>
+                                                                                           <div class="field-right add-new-fund-source-action">
+                                                                                              <button type="button" id="verify-ba-button"  class="field field-inline pull-right btn-buynow save-fund-source-action" disabled="">Verify</button>
+                                                                                           </div>
+                                                                                           <div class="field-right add-new-fund-source-action">
+                                                                                              <a href="#"><span class="cancel-fund-source-action">Cancel</span></a>
+                                                                                           </div>
+                                                                                           <div class="clear"></div>
+                                                                                        </div>
+                                                                                        <div class="verify-row">
+                                                                                           <p class="validation-message"></p>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                  </div>
+                                                                               </div>
+                                                                            </div>
+                                                                         </div>
+                                                                      </div>
+                                                                   </div>
+                                                                   <div data-bind="visible: selectedPaymentMethod() === paymentMethods.blueFish || selectedPaymentMethod() === paymentMethods.unset">
+                                                                      <input data-bind="value: availableFundingSourcesJson" name="AvailableFundingSources" type="hidden" value="[{&quot;showDeleteConfirmation&quot;:false,&quot;showOptions&quot;:false,&quot;isNew&quot;:false,&quot;maskedCardNumber&quot;:&quot;•••• •••• •••• 6746&quot;,&quot;sortOrder&quot;:null,&quot;cardLabel&quot;:&quot;Visa&quot;,&quot;cardType&quot;:1,&quot;id&quot;:6709999,&quot;fundingSourceType&quot;:&quot;credit_card&quot;,&quot;purchaseAmount&quot;:1,&quot;isAvailableForPurchase&quot;:true,&quot;isSelectedForPurchase&quot;:true,&quot;__ko_mapping__&quot;:{&quot;ignore&quot;:[],&quot;include&quot;:[&quot;_destroy&quot;],&quot;copy&quot;:[],&quot;observe&quot;:[],&quot;mappedProperties&quot;:{&quot;maskedCardNumber&quot;:true,&quot;sortOrder&quot;:true,&quot;cardLabel&quot;:true,&quot;cardType&quot;:true,&quot;id&quot;:true,&quot;fundingSourceType&quot;:true,&quot;purchaseAmount&quot;:true,&quot;isAvailableForPurchase&quot;:true,&quot;isSelectedForPurchase&quot;:true},&quot;copiedProperties&quot;:{}},&quot;allFundingSources&quot;:{&quot;creditCard&quot;:&quot;credit_card&quot;,&quot;internal&quot;:&quot;internal&quot;,&quot;bankAccount&quot;:&quot;bank_account&quot;,&quot;mixed&quot;:&quot;mixed&quot;,&quot;mixedBankAccount&quot;:&quot;mixed_bank_account&quot;,&quot;mixedCreditCard&quot;:&quot;mixed_credit_card&quot;,&quot;bankTransfer&quot;:&quot;bank_transfer&quot;,&quot;tmLoyalty&quot;:&quot;tm_loyalty&quot;,&quot;openBank&quot;:&quot;openbank&quot;,&quot;mixedOpenBank&quot;:&quot;mixed_openbank&quot;},&quot;isBankAccountFundingType&quot;:false,&quot;isCreditCardFundingType&quot;:true,&quot;isBalanceFundingType&quot;:false,&quot;isOpenBankFundingType&quot;:false,&quot;showBankAccountFundingType&quot;:false,&quot;showCreditCardFundingType&quot;:true,&quot;showBalanceFundingType&quot;:false,&quot;showOpenBankFundingType&quot;:false}]">
+                                                                      <input data-bind="value: showAddNewBankAccount" type="hidden" id="showAddNewBankAccount" name="ShowAddNewBankAccount" value="false">
+                                                                      <div data-bind="visible: showAddCreditCardModal()" id="add-new-credit-card-modal" class="ping-payment-modal fade" tabindex="-1" data-width="760" style="display: none;">
+                                                                         <div class="ping-payment-modal-bg" data-bind="click: toggleCloseAddNewCreditCard"></div>
+                                                                         <div class="ping-payment-modal-content">
+                                                                            <div class="ping-payment-modal-header">
+                                                                               <span class="ping-payment-modal-close" data-bind="click: toggleCloseAddNewCreditCard, enable: addCreditCardButtonEnabled, css: { 'disabled': !addCreditCardButtonEnabled()" id="close-Popup">×</span>
+                                                                            </div>
+                                                                            <div class="ping-payment-modal-body bluefish-container">
+                                                                               <div data-bind="css: { 'validation': !showAddNewCreditCard.isValid() }" class="">
+                                                                                  <div class="gringotts-modal-container">
+                                                                                     <div class="gringotts-modal-header">
+                                                                                        <div class="gringotts-modal-header-content">
+                                                                                           <div class="gringotts-modal-header-img">
+                                                                                              <img src="/Images/Payments/card-illustration@3x.png" class="gringotts-modal-img">
+                                                                                           </div>
+                                                                                           <img src="/Images/Payments/ping_by_tm.svg" class="ping-by-tm-logo">
+                                                                                           <div class="gringotts-modal-header-text">
+                                                                                              <h3>Add card to Ping</h3>
+                                                                                              <span class="add-funding-source-text">Use this card for purchases on Trade Me for all listings that support Ping, or to add credit to your Trade Me account.
+                                                                                              <a href="https://www.trademe.co.nz/Help/PopUp.aspx?help_id=880" id="TradeMeTopUpPaymentTemplate_GringottsIframeWrapper_aboutPingLink" target="_blank">Learn more about Ping.</a>
+                                                                                              </span>
+                                                                                           </div>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                     <div class="gringotts-iframe-wrapper">
+                                                                                        <div class="spinner-iframe-wrapper">
+                                                                                           <div id="spinner-wrapper" class="gringotts-spinner-hidden" data-bind="attr: { class: gringottsViewModel.spinnerClass }">
+                                                                                              <div class="spinner"></div>
+                                                                                           </div>
+                                                                                           <iframe id="ccIframe" style="" height="0px">
+                                                                                           </iframe>
+                                                                                        </div>
+                                                                                        <div class="card-validation-message-container" ></div>
+                                                                                        <div class="gringotts-footer-buttons">
+                                                                                           <button id="save-cc-button" class="btn-buynow gringotts-add-credit-card-button" type="submit" >Add card</button>
+                                                                                           <a href="#" class="" style="display: none;"><span class="cancel-fund-source-action">Cancel</span></a>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                     <input type="hidden" maxlength="4" name="CardBinNumber">
+                                                                                     <input type="hidden" maxlength="4" name="CardAccountNumber1">
+                                                                                     <input type="hidden" maxlength="4" name="CardAccountNumber2">
+                                                                                     <input type="hidden" maxlength="4" name="CardAccountNumber3">
+                                                                                     <input type="hidden" maxlength="30" name="CardName">
+                                                                                     <input type="hidden" maxlength="2" name="CardExpiryMonth">
+                                                                                     <input type="hidden" maxlength="2" name="CardExpiryYear">
+                                                                                     <input type="hidden" maxlength="4" name="CardCvv">
+                                                                                     <input type="hidden" value="1" name="SaveCardCheckbox">
+                                                                                  </div>
+                                                                               </div>
+                                                                            </div>
+                                                                         </div>
+                                                                      </div>
+                                                                   </div>
+                                                                </div>
+                                                                <div id="pay-by-other-means" class="accordion-box">
+                                                                   <div class="tabs-header-content-container" >
+                                                                      <span class="tabs-payment-method-title" >Internet or phone banking</span>
+                                                                      <div class="bluefish-box-header-title">
+                                                                         We're a pre-assigned biller with all major NZ banks, so you can credit your Trade Me account using internet or phone banking.        
+                                                                      </div>
+                                                                   </div>
+                                                                </div>
+                                                             </div>
+                                                          </div>
+                                                       </div>
+                                                    </div>
+                                                 </div>
+                                              </form>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <!-- Edited malqaa section End -->
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="Product_____Detail___Section padding-25 brdr-top-btm ">
+                                <div class="title">
+                                    <h4>Details</h4>
+                                </div>
+                                <div class="product____details____listing">
+                                    <ul>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="Detail__title">
+                                                            <h5>Quantity</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="detail___value">
+                                                            <span>General</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="Detail__title">
+                                                            <h5>Slug</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="detail___value">
+                                                            <span>
+                                                                
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="Detail__title">
+                                                            <h5>Tags</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="detail___value">
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                    </ul>
+                                </div>
+
+                                <div class="product____details____listing">
+                                    <ul>
+                                    </ul>
+                                </div>
+
+                                <div class="product____details____listing">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="product____detail___description padding-25 brdr-btm">
+                                <div class="title">
+                                    <h4>Description</h4>
+                                </div>
+                                <div class="product____description___wrapper">
+                                    <p>
+                                        
+
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div id="qapartial" class="comments_____section___wrappper no-print">
+
+    <h3>Questions &amp; Answers <span class="current-count"> (0) </span> </h3>
+
+
+    <div class="comments-sections padding-25 brdr-btm">
+
+        <div class="chat-box" id="bookmark">
+
+
+
+        </div>
+        <div class="detail-separator"></div>
+
+        <!-- product description end here -->
+        <!-- Faq section -->
+        <!-- -->
+    </div>
+
+
+    <div class="unaswered___question___count__sec">
+
+        <p>There are 0  UnAnswered Questions of this Advertisement</p>
+    </div>
+
+
+    <script>
+
+       
+
+   // $(".comments-sections").stop().animate({ scrollTop: $(".comments-sections")[0].scrollHeight },);
+
+    $("#click___to__reply p").click(function () {
+        $(this).parent().next(".replyform").show();
+        var ccc = $(".comments-sections").scrollTop()
+      
+       // $(".comments-sections").stop().animate({ scrollTop: $(".comments-sections")[0].scrollHeight });
+    });
+
+    $(".cancel__btn").click(function () {
+        $(this).parent().parent().hide();
+    });
+     $(".sub__btn").click(function () {
+          
+           
+            $.ajax( {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl + '/v1/AdvQueAndAns/answer?qId=' + $(this).attr('data-id') + '&answer=' + $(this).siblings('.message___text___box').val() + '&Loggedin=' + $.cookie('id'),
+               
+                success: function (response) {
+                    console.log(response);
+                    loadchat();
+                    
+                    
+                },
+                error: function () {
+
+
+                }
+
+            });
+        });
+        $(".cmt__btn").click(function () {
+
+
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl + '/v1/AdvQueAndAns/comment?qId=' + $(this).attr('data-id') + '&comment=' + $(this).siblings('.message___text___box').val() + '&Loggedin=' + $.cookie('id'),
+
+                success: function (response) {
+                    console.log(response);
+                    loadchat();
+
+
+                },
+                error: function () {
+
+
+                }
+
+            });
+        });
+    </script>
+</div>
+
+                            <div class="AskaQuestion____wrapper_____section">
+
+                                    <h1>User Need to be signed in To Ask a question</h1> <a href="http://dev.malqaa.com/Accounts/Login">Login</a>
+                            </div>
+
+
+                            <div class="shipping___details____section padding-25 brdr-top">
+                                <div class="row">
+                                    <div class="col-md-8 brdr-right">
+                                        <div class="title">
+                                            <h4>Shipping &amp; pick-up options</h4>
+                                        </div>
+                                        <div class="shipment">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <td>Destination &amp; description </td>
+                                                        <td>Price</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="70%">
+                                                            shipping within Saudia
+                                                        </td>
+                                                        <td width="30%">
+                                                            Free
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title text-center">
+                                            <h4>Payment Options</h4>
+                                        </div>
+                                        <div class="payment____option text-center">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="about____seller___section padding-25 brdr-top">
+                                    <div class="title">
+                                        <h3>About the seller</h3>
+                                    </div>
+                                    <div class="seller___information__section">
+                                        <div class="seller__avatar">
+                                            <img src="./Malqaa_files/seller__avatar.jpg">
+                                        </div>
+                                        <div class="seller__title">
+                                            <h2>Maheer</h2>
+                                        </div>
+                                        <div class="seller__status">
+                                            <span>99.7% positive feedback (373)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="seller___location">
+                                        <ul>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span>Location</span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="text-right"><span></span></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span>Member since</span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="text-right">
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span>View seller's other listings</span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="text-right">
+                                                            <span><img src="./Malqaa_files/detail-icon.png"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                        <div class="add__favourite___seller__btn no-print">
+                                            <button type="button" id="add-fav-seller">
+                                                <span id="heart">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="29.167" height="28" viewBox="0 0 29.167 28"> <g id="Group_3612" data-name="Group 3612" transform="translate(-318 -36)"> <g id="favorite_border-24px" transform="translate(318 36)"> <path id="Path_282" data-name="Path 282" d="M0,0H28V28H0Z" fill="none"></path> <path id="Path_283" data-name="Path 283" d="M18.917,3a6.986,6.986,0,0,0-5.25,2.438A6.986,6.986,0,0,0,8.417,3,6.354,6.354,0,0,0,2,9.417c0,4.41,3.967,8,9.975,13.463l1.692,1.528,1.692-1.54c6.008-5.448,9.975-9.042,9.975-13.452A6.354,6.354,0,0,0,18.917,3ZM13.783,21.142l-.117.117-.117-.117C8,16.113,4.333,12.788,4.333,9.417A3.987,3.987,0,0,1,8.417,5.333a4.561,4.561,0,0,1,4.165,2.753h2.182a4.532,4.532,0,0,1,4.153-2.753A3.987,3.987,0,0,1,23,9.417C23,12.788,19.337,16.113,13.783,21.142Z" transform="translate(0.333 0.5)" fill="#fff"></path> </g> <ellipse id="Ellipse_316" data-name="Ellipse 316" cx="5" cy="5.5" rx="5" ry="5.5" transform="translate(337.167 44)" fill="#43a047"></ellipse> <text id="_" data-name="+" transform="translate(341.167 54)" fill="#fff" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-4.38" y="0">+</tspan></text> </g></svg>
+                                                </span>
+                                                    <a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#" class="wetext" id="wtext" data-toggle="modal" data-target="#addtofavouriteuserpopup">
+                                                        <span class="btn__text1">Add to Favourite Sellers</span>
+                                                    </a>
+                                            </button>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-md-4 no-padding-left">
+                            <side>
+                                <div class="sidebar-widget-box">
+                                    <div class="wishlist-btn">
+                                        <a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#" id="wtext" data-toggle="modal" data-target="#addtofavouritepopup">
+                                            <span> <i class="fas fa-plus-circle"></i> </span> Add to Watchlist
+                                        </a>
+                                        <a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#" id="Removewatchlist" style="display: none;">
+                                            <span> <i class="fas fa-minus-circle"></i> </span> Remove From Watchlist
+                                        </a>
+                                    </div>
+                                </div>
+                                        <div class="sidebar-widget-box">
+                                            <div class="ad-closing-time text-center">
+                                                <h3>Closing time</h3>
+                                                <div class="details" id="demo">Bid Closed</div>
+                                            </div>
+                                        </div>
+                                <!-- listing number -->
+                                <div class="sidebar-widget-box">
+                                    <div class="ad-closing-time text-center">
+                                        <div class="listing-number">
+                                            Listing #:<span>jbwe8806NJ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- listing number end here -->
+                                <div class="sidebar-widget-box">
+                                    <div class="yellow-widget">
+
+
+                                        <div class="sidebar-widget-box">
+                                            <!--<div class="yellow-widget">
+                                            <div class="b-n-price">
+Buy Now                                                    <span>
+                                                        SAR $23.00
+
+                                                    </span>
+                                            </div>
+                                            <div class="buy-now-btn">-->
+                                            <!--<a onclick='return BuyNow()'>Buy Now</a>
+
+                                                </div>
+                                            </div>-->
+                                            <div class="wrapper-alert">
+                                                <div class=" error error alert alert-error error-messages" style="display:none;">
+                                                </div>
+
+                                            </div>
+                                            <div class="wrapper-alert">
+                                                <div class="success alert alert-success success-messages" style="display:none;">
+                                                </div>
+
+                                            </div>
+
+                                            <!--Bid Now button start-->
+
+                                            <div class="bid-now-section">
+                                                <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div class="bidNow-row">
+                                                                            
+                                                                            <div class="b-n-price">
+                                                                                Buy Now
+                                                                                <span>
+                                                                                    SAR 34
+                                                                                </span>
+                                                                            </div>
+
+                                                                            <!-- Button to Open Bid Pop-up -->
+                                                                            <div class="buy-now-btn">
+                                                                                <a class="btn btn-success bid-btn bidnowbuton" data-toggle="modal" data-target="#myModal">Buy Now</a>
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    <!--Bid Now button end-->
+                                                    <!-- Bid now popup Started -->
+                                                    <!-- The Modal -->
+                                                    <div class="place-abid-popup">
+                                                        <div class="modal fade" id="myModal">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+
+                                                                    <!--popup Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Bid Now</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                                    </div>
+
+                                                                    <!--popup Modal body -->
+                                                                    <div class="modal-body">
+                                                                        <div class="bid-now-body">
+                                                                            <div style="border-bottom:solid 5px #d4cece" class="bid-advertiement">
+                                                                                <div class="leftadd-image">
+                                                                                        <img src="./Malqaa_files/d3253833-0ab3-40f7-895b-a1375bd3c3e3.jpeg">
+
+                                                                                    <div class="image-desc">
+                                                                                        <h5>iphone</h5>
+                                                                                        <p></p>
+
+
+                                                                                        <div class="price-img">
+                                                                                                    <p>Reserve Not Met  <br> <span class="price-add">SAR 34</span></p>
+
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="container">
+                                                                                <div class="row yourbid-autobid">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="yourBid">
+                                                                                            <label>Your bid</label>
+
+                                                                                            <input id="bid-popup" type="number" placeholder="34" class="form-control payicon" min="0" required="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="yourBid">
+                                                                                            <label>Auto bid</label> <br>
+                                                                                            <label class="switchh">
+                                                                                                <input id="tgsw-autobid" type="checkbox">
+                                                                                                <span class="slider round"></span>
+                                                                                            </label>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="chose-ship">
+                                                                                            <label>Choose a shipping option</label>	<br>
+                                                                                            <input type="radio" value="1" name="shipping-option-radio" required="">
+                                                                                            <label>I will arrange shipping with the seller</label>   <br>
+                                                                                            <input type="radio" value="2" name="shipping-option-radio">
+                                                                                            <label>I will intend to pickup</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="sell-accpt-payment">
+                                                                                            <p class="selaccptpayment">Seller accepts payment by</p>
+                                                                                            <p class="cash">Cash, 3367 an, nuzh, Saudia Arabia</p>
+                                                                                            <p class="won">If you win youe are legally obligated to complete this purchase.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="remainders">
+                                                                                            <p>Remainders</p>
+                                                                                            <input id="reminder" type="checkbox" name="remindme">
+                                                                                            <label>I intend to pick-up</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Modal footer -->
+                                                                            <div class="modal-footer">
+                                                                                <div class="bidbtn">
+                                                                                    <button id="btn-place-bid" type="button" class="btn btn-success" data-dismiss="modal">Place Bid</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Bid now popup end -->
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-widget-box " style="padding: 0px 26px 26px 16px !important;" >
+                                                <div id="t-banid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div id="wrapbtn-id2">
+                                                                <h4>Current Bid</h4>
+                                                                <h1>AED 66.00</h1>
+                                                                <h2>Reserve met</h2>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="buy-now-btn" style="padding: 3px !important;">
+                                                                <a class="btn btn-success bid-btn bidnowbuton" id="wrapbtn-id" onclick="togglewrapFunction()" >Place Bid</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="t-wrap"  id="togglewrap-id" style="display: none;">
+                                                    <div id="t-banid" style="margin-top: 0px !important;">
+                                                        <h4>Current Bid</h4>
+                                                        <h1>AED 66.00</h1>
+                                                        <h2>Reserve met</h2>
+                                                    </div>
+                                                    <div class="row" id="t-bidid">
+                                                        <div class="col-md-6">
+                                                            <h3 id="t-maxbid1">Your bid</h3>
+                                                            <input type="text" placeholder="" style="width: 100%;">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h3>Auto-bid</h3>
+                                                            <label class="switch" id="t-switchid">
+                                                                <input type="checkbox">
+                                                                <span class="slider round" style="margin: 0px;" onclick="toggleFunction()"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="t-shopid">
+                                                        <h3>Choose A Shipping Option</h3>
+                                                        <label class="container-radio" style="margin-bottom:10px !important;">I will arrange shipping with the seller
+                                                            <input type="radio" checked="checked" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container-radio">I intend to pick-up
+                                                            <input type="radio" name="radio">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div id="t-payid">
+                                                        <h3>Seller accepts payment by</h3>
+                                                        <p>Cash, 3367 an, nuzhah, Makkah<br> 24225 7792, Saudi Arabia</p>
+                                                        <p>If you win, you are legally obligated to<br> complete your purchase</p>
+                                                    </div>
+                                                    <div id="t-remid">
+                                                        <h3>Reminder</h3>
+                                                        <label class="container-radio-reminder">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>I intend to pick-up
+                                                        </label>
+                                                    </div>
+                                                    <div id="t-btnid">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <button type="button" class="btn text-center" style="background-color:#A9AEBC;" id="goback-id">Cancel</button>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <button type="button" class="btn text-center" style="background-color: #C8A32A;" id="t-maxbid2">Place Bid</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-widget-box padding-10">
+                                                <div class="advertismentbox">
+                                                    <img src="./Malqaa_files/detail_add_image.png">
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-widget-box ">
+                                                <div class="seller-location">
+                                                    <span class="green"><i class="fas fa-map-marker-alt"></i>Seller located in Riyadh</span>
+                                                </div>
+                                                <div class="map-location">
+                                                    <img src="./Malqaa_files/map-img.png">
+                                                </div>
+                                            </div>
+
+                                            <div class="sidebar-widget-box">
+                                                <div class="share-listing">
+
+                                                    <div class="detail-heading">
+                                                        <h3>Share this listing</h3>
+                                                    </div>
+
+                                                    <div class="social-media">
+                                                        <ul>
+                                                            <li class="print-link"> <a herf="#"><span><i class="fas fa-print"></i></span> Print</a></li>
+                                                            <li> <a href="mailto:tariq.techxcape@gmail.com"><span><i class="far fa-envelope"></i></span> Email</a></li>
+                                                            <li> <a target="_blank" href="https://wwww.facebook.com/" class="fb-share-button" <span=""><i class="fab fa-facebook-square"></i> Facebook</a></li>
+                                                            <li> <a target="_blank" class="twitter-share-button" href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"><span><i class="fab fa-twitter-square"></i></span> Twitter</a></li>
+                                                            <li> <a href="https://www.instagram.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank"><span><i class="fab fa-instagram"></i></span> Instagram</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="sidebar-widget-box padding-10">
+                                                <div class="advertismentbox">
+                                                    <img src="./Malqaa_files/detail_add_image.png">
+                                                </div>
+
+                                                <div class="advertismentlong">
+                                                    <img src="./Malqaa_files/longad.png">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        </side></div>
+                    </div>
+                </div>
+            </div>
+</div></div></section>
+
+
+<div class="modal fade" id="addtofavouritepopup" tabindex="-1" role="dialog" aria-labelledby="addtofavouritepopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <!-- searched title -->
+
+
+                <div data-dismiss="modal" class="close__popup"><i class="far fa-window-close"></i></div>
+                <!-- searched title end here-->
+                    <div class="pop__up__message">
+                        <h1>Please Login To Add this Advertisement in Watchlist</h1>
+                        <a href="http://dev.malqaa.com/Accounts/Login" class="btn addtofavtloginbtn">Login</a>
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addtofavouriteuserpopup" tabindex="-1" role="dialog" aria-labelledby="addtofavouritepopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <!-- searched title -->
+
+
+                <div data-dismiss="modal" class="close__popup"><i class="far fa-window-close"></i></div>
+                <!-- searched title end here-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="pop__up__message">
+                                        <h1>Please Login To Add Favorites</h1>
+                                        <a href="http://dev.malqaa.com/Accounts/Login" class="btn addtofavtloginbtn">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+    </main>
+
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-col">
+                            <div class="footer-label">
+                                <h3>About Company</h3>
+                            </div>
+                            <div class="descriptiom"><p>Malqaa is the largest internet auction website operating in Saudia Arabia</p></div>
+                            <div class="app-icons">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><img src="./Malqaa_files/google-play.png"></a></li>
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><img src="./Malqaa_files/appstore.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="footer-logo text-center">
+                            <a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Malqaa</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="social-media-wrapper">
+                            <div class="footer-label ">
+                                <h3>Follow us</h3>
+                            </div>
+                            <div class="footer-social-media">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><span class="facebook-icon"></span></a></li>
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><span class="twitter-icon"></span></a></li>
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><span class="instagram-icon"></span></a></li>
+                                    <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#"><span class="linkedin-icon"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="copyrights">
+                            <p> Copyright © 2019 Mazad.  All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="footer-menu text-right">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Terms and Conditions</a></li>
+                                <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Privacy Policy</a></li>
+                                <li class="list-inline-item"><a href="http://dev.malqaa.com/Advertisement/Detail/jbwe8806NJ?template=General#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./Malqaa_files/jquery.steps.js.download"></script>
+    <script src="./Malqaa_files/jquery.cookie.js.download"></script>
+    <script src="./Malqaa_files/jquery.validate.min.js.download"></script>
+    <script src="./Malqaa_files/popper.js.download"></script>
+    <script src="./Malqaa_files/bootstrap.min.js.download"></script>
+    <script src="./Malqaa_files/jquery-ui.min.js.download"></script>
+    <script src="./Malqaa_files/chosen.jquery.min.js.download"></script>
+    <script src="./Malqaa_files/init.js.download"></script>
+    <script src="./Malqaa_files/autocomplete.js.download"></script>
+    <script src="./Malqaa_files/image-upload.js.download"></script>
+    <script src="./Malqaa_files/loading.min.js.download"></script>
+    <script src="./Malqaa_files/bootstrap-select.min.js.download"></script>
+    <script src="./Malqaa_files/arabicjs.js.download"></script>
+    <!---->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function toggleFunction() {
+            var x = document.getElementById("t-maxbid1");
+            var y = document.getElementById("t-maxbid2");
+            if (x.innerHTML === "Your bid" && y.innerHTML === "Place Bid") {
+                x.innerHTML = "Maximum Bid";
+                y.innerHTML = "Set auto-bid";
+            } else {
+                x.innerHTML = "Your bid";
+                y.innerHTML = "Place Bid";
+            }
+        }
+    </script>
+
+    <script>
+        /*function togglewrapFunction() {
+            var x = document.getElementById("togglewrap-id");
+            var y =document.getElementById("wrapbtn-id");
+            var z= document.getElementById("wrapbtn-id2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display="none";
+                z.style.display="none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function untogglewrapFunction() {
+            var x = document.getElementById("togglewrap-id");
+            var y =document.getElementById("wrapbtn-id");
+            var z= document.getElementById("wrapbtn-id2");
+            if (x.style.display === "block") {
+                y.style.display = "block";
+                z.style.display="block";
+                x.style.display="none";
+            } else {
+                x.style.display = "block";
+                y.style.display="none";
+            }
+        }*/
+
+        $(document).ready(function(){
+        $("#wrapbtn-id").click(function(){
+            $("#togglewrap-id").slideDown();
+            $("#wrapbtn-id").css("display", "none");
+            $("#wrapbtn-id2").css("display", "none");
+        });
+        });
+        $(document).ready(function(){
+        $("#goback-id").click(function(){
+            $("#togglewrap-id").slideUp(function(){
+                $("#wrapbtn-id").css("display", "block");
+                $("#wrapbtn-id2").css("display", "block");
+            });
+        });
+        });
+    </script>
+
+    <!----------------------------------------------------->
+    <script type="text/javascript">
+        $(window).ready(function () {
+            $(".loader").fadeOut("slow");
+         
+        });
+        
+    </script>
+    <script>
+        $(document).ready(function () {
+
+         $('.arabic-language').on('click', function () {
+             var dataId = $(this).attr("data-lang");
+
+                window.location.href = '/Accounts/SetCulture?Culture='+dataId;
+	        });
+
+            $(document).ajaxStart(function () {
+                // $(".log").text("Triggered ajaxStart handler.");
+                $('body').loading()
+            });
+            $(document).ajaxStop(function () {
+                // $(".log").text("Triggered ajaxStart handler.");
+                $('body').loading('stop')
+            });
+            function IAjax(url, callBack) {
+                $.ajax({
+                    url: url,
+                    success: function (result) {
+                        if (callBack)
+                            callBack(result);
+                    }
+                }).done(function () {
+                    //s $(this).addClass("done");
+                });
+            }
+
+
+        });
+    </script>
+
+
+    
+    <script src="./Malqaa_files/listing.js.download"></script>
+    <style>
+       /* #Product-detail .sidebar-widget-box {
+            padding: 30px 0px;
+            border-bottom: 1px solid #D7D5D2;
+            border-top: 1px solid #D7D5D2;
+        }*/
+        .round-loope {
+            border-radius: 100%;
+            border: 5px solid #F0F0F0;
+        }
+        #Product-detail .AskaQuestion____wrapper_____section h1 {
+            padding: 20px 0px 0px 40px;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        #Product-detail .AskaQuestion____wrapper_____section a {
+            color: #fff;
+            background: #43A047;
+            max-width: 150px;
+            padding: 10px 0px;
+            border-radius: 5px;
+            float: right;
+            width: 100%;
+            text-align: center;
+            margin: 10px 25px 16px !important;
+            display: block;
+        }
+
+
+        #addtofavouriteuserpopup a.btn.addtofavtloginbtn:hover {
+            color: #fff;
+        }
+
+        #addtofavouriteuserpopup a.btn.addtofavtloginbtn {
+            margin: 135px 0px 0px 0px;
+            background-color: green;
+            color: #fff;
+            width: 120px;
+        }
+
+        #Product-detail #wtext span.btn__text1 {
+            color: #fff;
+        }
+
+        #addtofavouriteuserpopup .modal-content {
+            margin: 105px 0px;
+        }
+
+        #addtofavouriteuserpopup .pop__up__message {
+            display: flex;
+            overflow: hidden;
+            height: 175px;
+            align-items: center;
+            text-align: center;
+            padding: 0px 10px;
+        }
+
+            #addtofavouriteuserpopup .pop__up__message h1 {
+                /* background-color: white; */
+                line-height: 1.5;
+                color: #f13409 !important;
+                font-size: 24px;
+            }
+
+
+
+        #Product-detail .about____seller___section .add__favourite___seller__btn button span#heart {
+            top: 0px !important;
+            transition: ease .5s;
+        }
+
+        #Product-detail .about____seller___section .add__favourite___seller__btn button span {
+            position: relative;
+            top: 2px;
+            transition: ease .5s;
+        }
+
+        #Product-detail .AskaQuestion____wrapper_____section a {
+            color: #fff;
+            background: #43A047;
+            max-width: 150px;
+            padding: 10px 0px;
+            border-radius: 5px;
+            float: right;
+            width: 100%;
+            text-align: center;
+            /* margin: -65px 25px 16px !important;*/
+            display: block;
+        }
+
+        a.feedbackbutn {
+            color: goldenrod !important;
+            background-color: #fff !important;
+            cursor: pointer;
+        }
+
+        .form-group.feedback_button a {
+            margin: -65px 0px 0px 0px;
+        }
+
+        #Product-detail .buy-now-btn {
+            display: inline;
+            float: right;
+            padding: 0px 13px;
+        }
+
+        #Product-detail .yellow-widget {
+            border-bottom: 1px solid #d7d5d2;
+            overflow: hidden;
+            display: flex;
+            /* flex-flow: row; */
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #Product-detail .b-n-price {
+            display: inline;
+            float: left;
+            font-size: 13px;
+            font-weight: 300;
+            padding-bottom: 26px;
+        }
+
+        #Product-detail .yellow-widget .bidnow-row {
+            border-bottom: 1px solid #d7d5d2;
+            width: 100%;
+            padding: 20px 46px;
+            padding-left: 5px !important;
+        }
+
+        a.btn.btn-success.bid-btn.bidnowbuton {
+            margin-left: 71px;
+            height: 47px !important;
+            /* line-height: inherit; */
+            padding: 1px 0px;
+        }
+
+        .bid-now-section {
+            border-bottom: 1px solid #d7d5d2;
+            /*padding: 48px 18px;*/
+            width: 100%;
+        }
+
+        .bidNow-row {
+            padding-left: 0px !important;
+            margin-bottom: 49px !important;
+        }
+
+        #Product-detail .yellow-widget .bidnow-row {
+            border-bottom: 1px solid #d7d5d2;
+            width: 100%;
+            padding: 37px 37px;
+            margin-left: 18px;
+        }
+
+        #Product-detail .yellow-widget .bidnow-row {
+            border-bottom: 1px solid #d7d5d2;
+            width: 100%;
+        }
+
+        .bidbtn {
+            margin-right: 372px !important;
+            /* float: left !important; */
+        }
+
+        .remainders p {
+            margin-bottom: 6px;
+        }
+
+        .sell-accpt-payment .won {
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .sell-accpt-payment .selaccptpayment {
+            margin-bottom: 20px;
+        }
+
+        .chose-ship label {
+            font-size: 15px;
+        }
+
+        .place-abid-popup .modal-content {
+            width: 600px !important;
+        }
+
+        .row.yourbid-autobid {
+            margin-top: 35px;
+        }
+
+        /* .customTextfield input {
+            border: unset;
+        }*/
+
+
+        .p-b-price p {
+            margin-left: 31px;
+            margin-bottom: 0px !important;
+        }
+
+        a#place-bid-btn {
+            margin-right: 32px;
+        }
+
+        .p-b-price input {
+            width: 53%;
+            margin: 0px 0px 0px 13px;
+            margin-left: 29px;
+        }
+
+        .toast__container {
+            position: fixed !important;
+        }
+
+        .sellers___comments {
+            margin-top: 10px;
+            color: #43a047;
+            font-weight: 400;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        #Product-detail .product____description___wrapper {
+            height: 100% !important;
+            max-height: 100% !important;
+        }
+
+        .morecontent span {
+            display: none;
+        }
+
+        a.morelink {
+            color: #43A047;
+            font-weight: 600;
+        }
+
+        .morelink {
+            display: block;
+        }
+
+
+
+        /*switch styling start*/
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 20px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+                top: 3px;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+            width: 58px;
+            height: 27px;
+            margin: 33px 14px;
+        }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+        /*switch styling end*/
+
+        .modal-header {
+            padding: 6px 14px;
+            background-color: #f7efef;
+        }
+
+        .bidbtn button {
+            width: 165px;
+        }
+
+        .bidbtn {
+            margin-right: 275px;
+        }
+
+        .chose-ship {
+            margin: 35px 0px 30px 0px;
+        }
+
+        .sell-accpt-payment p {
+            margin: 0px;
+        }
+
+        .remainders {
+            margin-top: 25px;
+        }
+
+        .modal-footer {
+            border: 0px;
+        }
+
+        .leftadd-image img {
+            max-width: 125px;
+            height: 140px;
+        }
+
+        .leftadd-image {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-desc {
+            margin: 0px 15px;
+        }
+
+        .price-img {
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+
+        var countDownDate = new Date('20-Nov-20 12:00:00 AM').getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "Bid Closed";
+            }
+        }, 1000);
+    </script>
+    <script>
+
+
+
+        function BuyNow() {
+            debugger;
+            var loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn != null)
+            {
+                 var formdata = {userid: '', advertisementId: 'jbwe8806NJ' };
+              $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl +'/v1/AddToCart/create',
+                data: JSON.stringify(formdata),
+                success: function (result) {
+                    if (result.status_code == 200)
+                    {
+                        window.location.href = '/Advertisement/Auction';
+                    }
+
+                },
+               error: function (xhr, status) {
+
+                    console.log(xhr);
+                }
+                });
+            }
+            else
+            {
+                  window.location.href = '/Accounts/Login';
+            }
+
+
+
+
+        }
+
+
+        function RefreshToken() {
+            var loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn != null) {
+                var vRefreshToken = localStorage.getItem('refToken');
+                var encodeToken = encodeURIComponent(vRefreshToken);
+                $.ajax({
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    type: 'POST',
+                    url: siteurl + '/v1/Accounts/refresh-token?refreshToken=' + encodeToken,
+                    success: function (result) {
+                        if (result.status_code == 200) {
+                            localStorage.removeItem(encodeToken);
+                            localStorage.setItem('refToken', result.data.refreshToken);
+                        }
+                        else if (result.status_code == 401) {
+                            localStorage.removeItem('refToken');
+                            localStorage.removeItem('loggedIn');
+                            window.location.href = '/Accounts/Logout';
+                        }
+                        else if (result.status_code == 404) {
+                            localStorage.removeItem('refToken');
+                            localStorage.removeItem('loggedIn');
+                            window.location.href = '/Accounts/Logout';
+                        }
+                        else {
+                            localStorage.removeItem('refToken');
+                            localStorage.removeItem('loggedIn');
+                            window.location.href = '/Accounts/Logout';
+                        }
+                    },
+                    error: function (xhr, status) {
+
+                        localStorage.removeItem('refToken');
+                        localStorage.removeItem('loggedIn');
+                        window.location.href = '/Accounts/Logout';
+                    }
+                });
+            }
+        }
+        $(window).on('load', function () {
+
+            RefreshToken();
+        });
+
+
+        $(document).ready(function () {
+            // Configure/customize these variables.
+            var showChar = 200;  // How many characters are shown by default
+            var ellipsestext = "...";
+            var moretext = "Show more <i class='fas fa-chevron - down'></i>";
+            var lesstext = "Show less <i class='fas fa-chevron - up'></i>";
+
+
+            $('.product____description___wrapper p').each(function () {
+                var content = $(this).html();
+
+                if (content.length > showChar) {
+
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar, content.length - showChar);
+
+                    var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                    $(this).html(html);
+                }
+
+            });
+
+            $(".morelink").click(function () {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+
+        function loadchat() {
+            $.ajax({
+                url: '/Advertisement/QAPartial/jbwe8806NJ?Aduser=119392dd-8b27-4f35-84c8-1ccf50343df7',
+                //contentType: 'application/html; charset=utf-8',
+                type: 'GET',
+                success: function (result) {
+                    $("#qapartial").html(result);
+
+                },
+               error: function (xhr, status) {
+
+                    console.log(xhr);
+                }
+           });
+        }
+        loadchat();
+
+
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+       if('False' == 'True')
+       {
+           $('#wtext').css('display', 'none');
+       }
+       else
+       {
+           $('#Removewatchlist').css('display', 'none');
+       }
+
+
+        var i = '1';
+         if('False1' == 'True1')
+            {
+
+             $('#addf').css('display', 'none');
+            }
+            else
+              {
+
+             $('#removef').css('display', 'none');
+            }
+        $("#comment__form").submit(function (e) {
+                e.preventDefault();
+                if ('' === "undefined" || '' === "null") {
+                    window.location.href = '/Accounts/Login';
+
+               }
+            else {
+                   var formdata = { question: $('#question').val(), advId: 'jbwe8806NJ', buyerId:'' };
+            $.ajax({
+               headers: {
+                       'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl + '/v1/AdvQueAndAns/create',
+                data: JSON.stringify(formdata),
+                success: function (data) {
+                        $(".error-messages").css("display","none");
+                        $(".success-messages").css("display", "block");
+                        $(".success-messages").html("Question Created Successfully");
+                       setTimeout(function () { $(".success-messages").slideToggle(500); }, 3000);
+                    $(".comments-sections").stop().animate({ scrollTop: $(".comments-sections")[0].scrollHeight });
+                    $('#question').val('');
+                       loadchat();
+                },
+                error: function ()
+                {
+
+                }
+            });
+        }
+        });
+
+
+        $("#postquestNew").click(function (e) {
+
+                e.preventDefault();
+            var formdata = { Description: $('#feedback').val(), advId: 'jbwe8806NJ', LoginUserId: '', rating: $('input:radio[name=rad]:checked').val(),sellerId: '119392dd-8b27-4f35-84c8-1ccf50343df7'};
+
+            $.ajax({
+               headers: {
+                       'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl + '/v1/Auction/InsertFeedback',
+                data: JSON.stringify(formdata),
+                success: function (data) {
+                        $(".error-messages").css("display","none");
+                        $(".success-messages").css("display", "block");
+                        $(".success-messages").html("Feedback Created Successfully");
+                       setTimeout(function () { $(".success-messages").slideToggle(500); }, 3000);
+                    $(".comments-sections").stop().animate({ scrollTop: $(".comments-sections")[0].scrollHeight });
+                    $('#feedback').val('');
+                       loadchat();
+                },
+                error: function ()
+                {
+
+                }
+            });
+        //}
+        });
+
+
+        $("#watchlist").click(function (e) {
+            debugger;
+            var formdata = { userid: '', advertisementId: 'jbwe8806NJ', ReminderType: $('.searchedoption__radio__btn:checked', '#addcreationpop__form').val()};
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl+'/v1/Watchlist/insert',
+                data: JSON.stringify(formdata),
+                success: function (result) {
+                    $("#addtofavouritepopup").modal("hide");
+                    $('.toast__container').css("display", "block");
+                    $(".toast__container").fadeTo(3000, 500).slideUp(500, function () {
+                        $(".toast__container").slideUp(500);
+                    });
+
+                    $('#wtext').css('display', 'none');
+                    $('#Removewatchlist').css('display', 'inline-block');
+
+                },
+               error: function (xhr, status) {
+
+                    console.log(xhr);
+                }
+                });
+
+
+        });
+
+        $("#Removewatchlist").click(function (e) {
+            debugger;
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+                url: siteurl + '/v1/Watchlist/delete?userid='+''+'&adid='+'jbwe8806NJ',
+                success: function (result) {
+
+                    $('.toast__container').css("display", "block");
+                    $('.toast__message').text('Advertisement Removed From WatchList');
+                    $(".toast__container").fadeTo(3000, 500).slideUp(500, function () {
+                        $(".toast__container").slideUp(500);
+                    });
+
+                    $('#Removewatchlist').css('display', 'none');
+                    $('#wtext').css('display', 'inline-block');
+                },
+               error: function (xhr, status) {
+
+                    console.log(xhr);
+                }
+                });
+
+
+        });
+
+        $("#addf").click(function (e) {
+            var favdata = { loggedInUserId:'', sellerId: '119392dd-8b27-4f35-84c8-1ccf50343df7'};
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+
+                type: 'POST',
+                data: JSON.stringify(favdata),
+                url: siteurl + '/v1/Favourite/insertseller',
+                success: function (result) {
+
+                    $('.toast__container').css("display", "block");
+                    $('.toast__message').text('Seller Marked as Favorite');
+                    $(".toast__container").fadeTo(3000, 500).slideUp(500, function () {
+                        $(".toast__container").slideUp(500);
+                    });
+
+                    $('#addf').css('display', 'none');
+                    $('#removef').css('display', 'inline-block');
+                },
+               error: function (xhr, status) {
+
+                    console.log(xhr);
+                }
+            });
+        });
+        $("#removef").click(function (e) {
+
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+
+                type: 'POST',
+                url: siteurl + '/v1/Favourite/RemoveFavoriteSeller?sellerId=' + '119392dd-8b27-4f35-84c8-1ccf50343df7' + '&userid=' + '',
+                success: function (result) {
+
+                    $('.toast__container').css("display", "block");
+                    $('.toast__message').text('Seller removed from Favorite');
+                    $(".toast__container").fadeTo(3000, 500).slideUp(500, function () {
+                        $(".toast__container").slideUp(500);
+                    });
+
+                    $('#removef').css('display', 'none');
+                    $('#addf').css('display', 'inline-block');
+                },
+               error: function (xhr, status) {1
+
+                    console.log(xhr);
+                }
+            });
+        });
+
+
+        $("#place-bid-btn").click(function (e) {
+            e.preventDefault();
+            if (typeof $.cookie('accesstoken') === "undefined" || $.cookie('accesstoken') === "null") {
+
+                window.location.href = '/Accounts/Login';
+
+            }
+
+            else
+            {
+                var maxbid = 34;
+                var formdata = { bidAmount: $('#insert-bid-textbox').val(), auctionId: 'jbwe8806NJ', loggedInUserId: $.cookie('id') };
+                var maxb = JSON.stringify(parseInt(formdata.bidAmount));
+                //alert(maxb);
+                var bid = parseInt(maxb);
+                //alert(bid);
+
+                if (bid > maxbid) {
+
+                     //alert(days + ":" + hours + ":" + minutes + ": " + seconds);
+                    $.ajax({
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        type: 'POST',
+                        url: siteurl + '/v1/Bid/PlaceBid',
+                        data: JSON.stringify(formdata),
+                        success: function (data) {
+                            $(".error-messages").css("display", "none");
+                            $(".success-messages").css("display", "block");
+                            $(".success-messages").html("Bid Placed Successfully");
+                            setTimeout(function () { $(".success-messages").slideToggle(500); }, 3000);
+                            $('#insert-bid-textbox').val('');
+
+                        },
+                        error: function (xhr, status) {
+                            console.log(xhr);
+                        }
+                    });
+
+                }
+                else {
+                    alert("Bid must be greater than " + maxbid);
+                }
+
+
+
+
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="./Malqaa_files/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Malqaa_files/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./Malqaa_files/fontawesome.min.css">
+    <link href="./Malqaa_files/feedback_popup.css" rel="stylesheet">
+
+    <script>
+        $(window).on("load", function () {
+            $(".tracker").click(function () {
+                $('.owl-item.active a').trigger('click');
+            });
+        });
+    </script>
+    <script src="./Malqaa_files/mgzoomsl.js.download"></script>
+    <script src="./Malqaa_files/jquerymgscript.js.download"></script>
+    <script src="./Malqaa_files/owl.carousel.min.js.download"></script>
+    <script src="./Malqaa_files/jQuery.print.js.download"></script>
+    <script src="./Malqaa_files/product-detail-slider.js.download"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="./Malqaa_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script>
+        //$('[data-fancybox="gallery"]').fancybox({})// Options will go here});
+                  if ('en-US' == 'ar') {
+                      detailslider(true);
+                      $("body").addClass('arabic');
+                      if ($("body").hasClass("arabic")) {
+                          document.write('<script src="../assets/js/localization/messages_ar.js"></sc' + 'ript>');
+                          $(".right-side-section-area").addClass("arabic-v");
+                      } else if ($("body").hasClass("English")) {
+                          $(".right-side-section-area").removeClass("arabic-v");
+                      }
+                  }
+                  else {
+                    detailslider(false);
+                  }
+    </script>
+
+
+    <script src="./Malqaa_files/centerImage.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/bootstrap-select.css">
+    <script src="./Malqaa_files/bootstrap-select.min.js.download"></script>
+    <link rel="stylesheet" href="./Malqaa_files/jquery.fancybox.min.css">
+    <script src="./Malqaa_files/jquery.fancybox.min.js.download"></script>
+    <script>
+
+        $('[data-fancybox="gallery"]').fancybox({}); //Options will go here})
+        $('#select_language').on('change', function () {
+
+                window.location.href = '/Accounts/SetCulture?Culture='+this.value;
+        });
+
+        //bid button ajax call started
+
+        //get toggle switch value script start
+        var switchStatus = false;
+        $("#tgsw-autobid").on('change', function () {
+            if ($(this).is(':checked')) {
+                switchStatus = $(this).is(':checked');
+                //alert(switchStatus);// To verify
+            }
+            else {
+                switchStatus = $(this).is(':checked');
+                //alert(switchStatus);// To verify
+            }
+        });
+        //get toggle switch value script ends
+
+        $('#btn-place-bid').click(function (e) {
+            var currentBid = $('#bid-popup').val();
+            var maxbid = 34;
+            var remindme = JSON.stringify($('input:checkbox[name=remindme]').val());
+            var checkBox = document.getElementById("reminder");
+            if (checkBox.checked == true) {
+                remindme = "1";
+            }
+            else {
+                remindme = "0";
+            }
+            var formdata = {
+                loggedInUserId: '',
+                bidAmount: currentBid,
+                auctionId: 'jbwe8806NJ',
+                shippingOption: $('input:radio[name=shipping-option-radio]:checked').val(),
+                reminder: remindme,
+                autoBid: switchStatus
+            };
+            if (currentBid > maxbid) {
+                    //alert("i m in ajax");
+                    $.ajax({
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        type: 'POST',
+                        url: siteurl + '/v1/Bid/PlaceBid',
+                        data: JSON.stringify(formdata),
+                        success: function (data) {
+                            $(".error-messages").css("display", "none");
+                            $(".success-messages").css("display", "block");
+                            $(".success-messages").html("Bid Placed Successfully");
+                            setTimeout(function () { $(".success-messages").slideToggle(500); }, 3000);
+                            //$('#insert-bid-textbox').val('');
+
+                        },
+                        error: function (xhr, status) {
+                            console.log(xhr);
+                        }
+                    });
+
+                }
+                else {
+                alert("Bid must be greater than " + maxbid);
+                $(".success-messages").css("display", "none");
+                $(".error-messages").css("display", "block");
+                $(".error-messages").html("Bid must be greater than "+ maxbid);
+                setTimeout(function () { $(".error-messages").slideToggle(500); }, 3000);
+
+                }
+
+        });
+      //bid button ajax call end
+    </script>
+
+
+
+
+<div class="round-loope" style="position: absolute; z-index: 3; width: 200px; height: 200px; left: 721.21px; top: 699.876px; visibility: visible; overflow: hidden; display: none;"><img src="./Malqaa_files/d3253833-0ab3-40f7-895b-a1375bd3c3e3.jpeg" style="position: relative; max-width: none; left: -874.949px; top: -710.705px; width: 1465px; height: 1000px;"></div><div class="statusdiv" style="position: absolute; z-index: 3; top: 815.69px; left: 804.222px; visibility: visible; border: 1px solid black; background: rgb(192, 192, 192); padding: 4px; font: bold 13px Arial; opacity: 0.8; display: none;"></div><div class="tracker" style="z-index: 3; background: rgb(135, 135, 135); position: absolute; width: 732.641px; height: 500px; left: -10000px; top: -10000px; cursor: none; opacity: 0; display: none;"></div><div class="round-loope" style="position: absolute; z-index: 3; width: 200px; height: 200px; left: -10000px; top: -10000px; visibility: hidden; overflow: hidden;"></div><div class="statusdiv preloadevt" style="position: absolute; display: none; z-index: 3; top: 583.547px; left: 1469.45px; visibility: visible;"><img src="data:image/gif;base64,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"></div><div class="tracker" style="z-index: 3; background-image: none; position: absolute; width: 500px; height: 500px; left: -10000px; top: -10000px;"></div><div class="round-loope" style="position: absolute; z-index: 3; width: 200px; height: 200px; left: -10000px; top: -10000px; visibility: hidden; overflow: hidden;"></div><div class="statusdiv preloadevt" style="position: absolute; display: none; z-index: 3; top: 583.547px; left: 2212.09px; visibility: visible;"><img src="data:image/gif;base64,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"></div><div class="tracker" style="z-index: 3; background-image: none; position: absolute; width: 500px; height: 500px; left: -10000px; top: -10000px;"></div><div class="round-loope" style="position: absolute; z-index: 3; width: 200px; height: 200px; left: -10000px; top: -10000px; visibility: hidden; overflow: hidden;"></div><div class="statusdiv preloadevt" style="position: absolute; display: none; z-index: 3; top: 583.547px; left: 2954.73px; visibility: visible;"><img src="data:image/gif;base64,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"></div><div class="tracker" style="z-index: 3; background-image: none; position: absolute; width: 500px; height: 500px; left: -10000px; top: -10000px;"></div></body></html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="13px" viewBox="0 0 18 13" version="1.1">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>mastercard-mini</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="2.61080995%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.06" offset="0%"/>
+            <stop stop-color="#000000" stop-opacity="0.03" offset="100%"/>
+        </linearGradient>
+        <circle id="path-2" cx="12" cy="5.54" r="5.5"/>
+    </defs>
+    <g id="Ping-patterns-&amp;-tans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mastercard-mini">
+            <g id="ping/-/fund-source/mastercard-mini">
+                <g id="ping/-/fund-source/shim" fill="url(#linearGradient-1)">
+                    <path d="M0,2.00276013 C0,0.896666251 0.892622799,1.8189894e-12 1.99508929,1.8189894e-12 L16.0049107,1.8189894e-12 C17.1067681,1.8189894e-12 18,0.893542647 18,2.00276013 L18,10.9972399 C18,12.1033337 17.1073772,13 16.0049107,13 L1.99508929,13 C0.893231902,13 0,12.1064574 0,10.9972399 L0,2.00276013 Z" id="Mask"/>
+                </g>
+                <g id="mastercard" stroke-width="1" transform="translate(0.000000, 1.000000)">
+                    <circle id="Oval-112" fill="#CE4549" cx="6" cy="5.54" r="5.5"/>
+                    <g id="Oval-112-Copy">
+                        <use fill="#D8D8D8" xlink:href="#path-2"/>
+                        <use fill="#FFAA2D" xlink:href="#path-2"/>
+                    </g>
+                    <path d="M9,0.929465361 C10.5051046,1.91081591 11.5,3.60922283 11.5,5.54 C11.5,7.47077717 10.5051046,9.16918409 9,10.1505346 C7.49489536,9.16918409 6.5,7.47077717 6.5,5.54 C6.5,3.60922283 7.49489536,1.91081591 9,0.929465361 Z" id="Combined-Shape" fill="#FF7733"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

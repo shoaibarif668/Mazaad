@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://dev.malqaa.com/Accounts/Signup -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Malqaa</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <!-- stylesheets of Mazad Last Updated 30-12-2019 -->
+
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/app.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/intlTelInput.min.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/StyleSheet.css">
+    <link rel="stylesheet" href="./Malqaa_files/loading.min.css">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/style.css">
+	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"/>
+    <link href="filepond.css" rel="stylesheet">
+
+    <link href="./Malqaa_files/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Malqaa_files/bootstrap-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.css" integrity="sha512-bbUR1MeyQAnEuvdmss7V2LclMzO+R9BzRntEE57WIKInFVQjvX7l7QZSxjNDt8bg41Ww05oHSh0ycKFijqD7dA==" crossorigin="anonymous" />
+    <script src="./Malqaa_files/siteurl.js.download"></script>
+
+    
+
+    <!-- stylesheets end here -->
+	
+    <!-- jquery -->
+    <script src="./Malqaa_files/jquery.js.download"></script>
+    <!-- jquery -->
+
+   
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.986.0" data-gr-ext-installed="">
+    <div class="loader" style="display: none;"></div>
+
+    <!-- main section -->
+    <main class="login-registration-page">
+
+        <section class="left-side-area-content">
+            <div class="slideshow">
+                <img src="./Malqaa_files/01.jpg" style="display: none;">
+                <img src="./Malqaa_files/02.jpg" style="display: none;">
+                <img src="./Malqaa_files/03.jpg" style="display: none;">
+                <img src="./Malqaa_files/04.jpg" style="">
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <div class="right-side-section-area">
+
+                            <!-- language section -->
+
+                            <div class="language-swtich-wrapper text-right">
+                                <div class="language">
+                                    <div class="header-left-language-switcher">
+                                            <div class="arabic-language" data-lang="ar"><span>  العربية</span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- language section end here -->
+                            <!-- theme logo -->
+
+                            <div class="theme-logo text-center">
+                                <h1>Ma<span style="color:#C8A32A;">zad</span></h1>
+                            </div>
+
+                            <!-- theme logo end here -->
+                            <!-- Register now area -->
+                            <!-- Register Now link end here -->
+                            <!-- form wrapper area -->
+
+                            
+
+
+
+<!-- login form wrapper -->
+<!-- Register now area -->
+
+<div class="register-now-link text-center">
+    <span>Already a Member? <a href="http://dev.malqaa.com/Accounts/Login">Login </a></span>
+</div>
+
+<!-- Register Now link end here -->
+<!-- form wrapper area -->
+<div class="login-registration-form-area">
+    <!-- MultiStep Form -->
+    <div id="msform">
+        <fieldset>
+            <div class="wrapper-alert">
+                <div class="alert alert-danger alert-dismissible error-messages" style="display:none;">
+                </div>
+                <span class="close-error-message" style="display:none;">X</span>
+            </div>
+
+
+            <div class="wrapper-alert">
+                <div class="success alert alert-success success-messages" style="display:none;">
+                </div>
+                <span class="close-success-message" style="display:none;">X</span>
+            </div>
+
+            <div class="initial-form-wrapper">
+                <form >
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">First Name</p>
+                                <input type="hidden" id="uid">
+                               <input type="text" name="fname" id="fname" class="form-control error"> <!-- <label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">Last Name</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="lname" id="lname" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Email</p>
+                                <input type="hidden" id="uid">
+                                 <input type="email" name="email" id="email" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Password</p>
+                                <input type="hidden" id="uid">
+                                 <input type="password" name="password" id="password" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Alternate Email</p>
+                                <input type="hidden" id="uid">
+                                 <input type="email" name="email" id="email" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">User Name</p>
+                                <input type="hidden" id="uid">
+                               <input type="text" name="uname" id="uname" class="form-control error"> <!-- <label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">Business Name</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="bname" id="bname" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Actual Address</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="actaddress" id="actaddress" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Billing Address</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="baddress" id="badress" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Business Phone Number</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="bphone" id="bphone" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Country</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="bcountry" id="bcountry" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                           <input type="file" 
+							   class="filepond"
+							   name="filepond"
+							   multiple
+							   data-max-file-size="3MB"
+							   data-max-files="3" />
+							   
+							   
+                                <!-- <div class="form-group">
+                                    <p class="form-top-section">Upload Business Certificate</p>
+                                    <input type="hidden" id="uid">
+                                    <input type="text" name="bcertificate" id="bcertificate" class="form-control error" ><label id="email-error" class="error" for="email">This field is required.</label> -->
+                                    <!-- <form id="upload-widget" method="post" action="/upload" class="dropzone">
+                                        <input type="file" name="next" id="certificatefile" class="next action-button sub_btn" value="Upload File">
+                                    </form>
+                                </div> --> 
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">Registration Number</p>
+                                <input type="hidden" id="uid">
+                               <input type="text" name="rnumber" id="rnumber" class="form-control error"> <!-- <label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="form-top-section">Expiry Date</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="edate" id="edate" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Sub User</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="suser" id="suser" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Google Map Integration</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="gmap" id="gmap" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <p class="form-top-section">Primary Contact Information</p>
+                                <input type="hidden" id="uid">
+                                 <input type="text" name="cinfo" id="cinfo" class="form-control error" ><!--<label id="email-error" class="error" for="email">This field is required.</label> -->
+                            </div>
+                        </div>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8ILWdkDymW1Hkhfwbhfn5M4FUN4h5h5MDHzoAUDnM62YfCkG73OrQrA29bPJjQy4v6sBkAiEdA4gIeMxXls36tjz_SNzZAUtKLwfmQFVPb7V8QOn5YXieVpaPbaGWVo1y2_BYT6LQkjt5U0sChuPvYo"></form>
+            </div>
+
+
+            <input type="button" name="next" id="initialuser" class="next action-button sub_btn" value="Submit">
+        </fieldset>
+    </div>
+
+</div>
+<!-- form wrapper area end here -->
+
+
+
+                            <!-- form wrapper area end here -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main section end here -->
+
+    <script src="./Malqaa_files/jquery.validate.min.js.download"></script>
+    <script src="./Malqaa_files/jquery.cookie.js.download"></script>
+    <script src="./Malqaa_files/dobpicker.js.download"></script>
+    <script src="./Malqaa_files/crs.min.js.download"></script>
+    <script src="./Malqaa_files/popper.js.download"></script>
+    <script src="./Malqaa_files/bootstrap.min.js.download"></script>
+    <script src="./Malqaa_files/intlTelInput.js.download"></script>
+    <script src="./Malqaa_files/loading.min.js.download"></script>
+    <script src="./Malqaa_files/custom.js.download"></script>
+    <script src="./Malqaa_files/bootstrap-select.min.js.download"></script>
+	<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+	<script src="filepond.js"></script>
+    <script>
+
+var myDropzone = new Dropzone(".dz-message", {
+  url: "/file/post",
+  acceptedFiles: accept,
+  uploadMultiple: false,
+  createImageThumbnails: false,
+  addRemoveLinks: true,
+  maxFiles: 3,
+  maxfilesexceeded: function(file) {
+    this.removeAllFiles();
+    this.addFile(file);
+  },
+  init: function() {
+    this.on('error', function(file, errorMessage) {
+      if (errorMessage.indexOf('Error 404') !== -1) {
+        var errorDisplay = document.querySelectorAll('[data-dz-errormessage]');
+        errorDisplay[errorDisplay.length - 1].innerHTML = 'Error 404: The upload page was not found on the server';
+      }
+    });
+  }
+});
+
+
+        $(document).ready(function () {
+
+
+
+            $( "select.crs-country" ).change(function() {
+
+                if ($("body").hasClass("arabic")) {
+
+                    $('select option:contains("Al Janūbīyah")').text('الجنابية');
+                    $('select option:contains("Al Manāmah")').text('المنامة');
+                    $('select option:contains("Al Muḩarraq")').text('المحرق');
+                    $('select option:contains("Al Wusţá")').text('الوصل');
+                    $('select option:contains("Ash Shamālīyah")').text('الشمالية');
+                    $('select option:contains("Ad Dakhiliyah")').text('الداخلية');
+                    $('select option:contains("Al Buraymi")').text('البريمي');
+                    $('select option:contains("Al Wusta")').text('الوسطى');
+                    $('select option:contains("Az Zahirah")').text('الزاهرة');
+                    $('select option:contains("Janub al Batinah")').text('جنوب الباطنة');
+                    $('select option:contains("Janub ash Sharqiyah")').text('جنوب الشرقية');
+                    $('select option:contains("Masqat")').text('مسقط');
+                    $('select option:contains("Musandam")').text('مسندم');
+                    $('select option:contains("Shamal al Batinah")').text('شمال الباطنة');
+                    $('select option:contains("Shamal ash Sharqiyah")').text('شمال الشرقية');
+                    $('select option:contains("Zufar")').text('ظفار');
+                    $('select option:contains("Asir")').text('عسير');
+                    $('select option:contains("Al Bahah")').text('الباحة');
+                    $('select option:contains("Al Hudud ash Shamaliyah")').text('الحدود الشمالية');
+                    $('select option:contains("Al Jawf")').text('الجوف');
+                    $('select option:contains("Al Madinah al Munawwarah")').text('المدينة المنورة');
+                    $('select option:contains("Al Qasim")').text('القاسم');
+                    $('select option:contains("Ar Riyad")').text('الرياض');
+                    $('select option:contains("Ash Sharqiyah")').text('الشرقية');
+                    $('select option:contains("Hail")').text('وابل');
+                    $('select option:contains("Jazan")').text('جيزان');
+                    $('select option:contains("Makkah al Mukarramah")').text('مكة المكرمة');
+                    $('select option:contains("Najran")').text('نجران');
+                    $('select option:contains("Tabuk")').text('تبوك');
+                    $('select option:contains("Abu Dhabi")').text('أبوظبي');
+                    $('select option:contains("Dubai")').text('دبي');
+                    $('select option:contains("Fujairah")').text('الفجيرة');
+                    $('select option:contains("Ras al Khaimah")').text('رأس الخيمة');
+                    $('select option:contains("Sharjah")').text('الشارقة');
+                    $('select option:contains("Umm Al Quwain")').text('أم القيوين');
+                    $('select option:contains("Al Aḩmadi")').text('العمادي');
+                    $('select option:contains("Al Farwānīyah")').text('الفروانية');
+                    $('select option:contains("Al Jahrā’")').text('الجهراء');
+                    $('select option:contains("Al ‘Āşimah")').text('العاصمة');
+                    $('select option:contains("Mubārak al Kabir")').text('مبارك الكبير');
+                    $('select option:contains("Ḩawallī")').text('حولي');
+
+
+
+                }
+            });
+
+            $('body.arabic select#dobday option:contains("Day")').each(function(){
+               var $this = $(this);
+               $this.text($this.text().replace("Day","يوم"));
+            });
+            $('body.arabic select#dobmonth option:contains("Month")').each(function(){
+               var $this = $(this);
+               $this.text($this.text().replace("Month","شهر"));
+            });
+            $('body.arabic select#dobyear option:contains("Year")').each(function(){
+               var $this = $(this);
+               $this.text($this.text().replace("Year","عام"));
+            });
+            if ($("body").hasClass("arabic")) {
+
+                $('select option:contains("Al Janūbīyah")').text('الجنابية');
+                $('select option:contains("Al Manāmah")').text('المنامة');
+                $('select option:contains("Al Muḩarraq")').text('المحرق');
+                $('select option:contains("Al Wusţá")').text('الوصل');
+                $('select option:contains("Ash Shamālīyah")').text('الشمالية');
+                $('select option:contains("Ad Dakhiliyah")').text('الداخلية');
+                $('select option:contains("Al Buraymi")').text('البريمي');
+                $('select option:contains("Al Wusta")').text('الوسطى');
+                $('select option:contains("Az Zahirah")').text('الزاهرة');
+                $('select option:contains("Janub al Batinah")').text('جنوب الباطنة');
+                $('select option:contains("Janub ash Sharqiyah")').text('جنوب الشرقية');
+                $('select option:contains("Masqat")').text('مسقط');
+                $('select option:contains("Musandam")').text('مسندم');
+                $('select option:contains("Shamal al Batinah")').text('شمال الباطنة');
+                 $('select option:contains("Shamal ash Sharqiyah")').text('شمال الشرقية');
+                 $('select option:contains("Zufar")').text('ظفار');
+                 $('select option:contains("Asir")').text('عسير');
+                 $('select option:contains("Masqat")').text('مسقط');
+                 $('select option:contains("Masqat")').text('مسقط');
+
+                $(".crs-country").html('');
+                var myOptions = {
+                   Default: 'اختر بلدك',
+                Bahrain : 'البحرين',
+                   Oman: 'سلطنة عمان',
+                   Saudi_Arabia: 'المملكة العربية السعودية',
+                   United_Arab_Emirates: 'الإمارات العربية المتحدة',
+                   Kuwait:'الكويت',
+
+                };
+                var mySelect = $('.crs-country');
+                $.each(myOptions, function(val, text) {
+                    mySelect.append("<option value='"+val.replace("_", " ")+"'>"+text+"</option")
+                });
+            }
+
+
+
+
+           $('.arabic-language').on('click', function () {
+             var dataId = $(this).attr("data-lang");
+
+                window.location.href = '/Accounts/SetCulture?Culture='+dataId;
+	        });
+            $(document).ajaxStart(function () {
+                // $(".log").text("Triggered ajaxStart handler.");
+                $('body').loading()
+            });
+            $(document).ajaxStop(function () {
+                // $(".log").text("Triggered ajaxStart handler.");
+                $('body').loading('stop')
+            });
+            function IAjax(url, callBack) {
+                $.ajax({
+                    url: url,
+                    success: function (result) {
+                        if (callBack)
+                            callBack(result);
+                    }
+                }).done(function () {
+                    //s $(this).addClass("done");
+                });
+            }
+
+
+        });
+    </script>
+    
+
+    <script>
+        var val = "Your password must contain at least one uppercase and number ";
+        console.log(val);
+             if ('en-US' == 'ar') {
+            $("body").addClass('arabic');
+                 if ($("body").hasClass("arabic")) {
+                        val = "يرجى تصحيح هذا الحقل للمتابعة";
+                 document.write('<script src="../assets/js/localization/messages_ar.js"></sc' + 'ript>');
+			$(".right-side-section-area").addClass("arabic-v");
+		} else if ($("body").hasClass("English")) {
+			$(".right-side-section-area").removeClass("arabic-v");
+		}
+        }
+        $('#select_language').on('change', function () {
+
+                window.location.href = '/Accounts/SetCulture?Culture='+this.value;
+        });
+
+        var CountryOptions = '';
+        function GetCity(name) {
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'GET',
+
+                url: siteurl + '/v1/Country/City?Id=' + name,
+                success: function (data) {
+                    console.log(data);
+                    var CityOptions = data;
+                    if (data.length != 0) {
+
+                        var options = '';
+                        $.each(CityOptions.data, function (index, value) {
+                            options += '<option value="' + value.key + '">' + value.name + '</option>';
+                            console.log(value.name);
+                        });
+                        console.log(options);
+
+
+                        $('#city-field').append(options);
+
+
+
+                    }
+                    else {
+
+                        console.log('No Record of Country:' + $('.nochildren').val());
+                    }
+
+                },
+                error: function () {
+
+
+                }
+
+            });
+        }
+        function GetRegion(name) {
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'GET',
+
+                url: siteurl + '/v1/Country/City?Id=' + name,
+                success: function (data) {
+                    console.log(data);
+                    CountryOptions = data;
+                    if (data.length != 0) {
+
+                        var options = '';
+                        $.each(CountryOptions.data, function (index, value) {
+                            options += '<option value="' + value.key + '">' + value.name + '</option>';
+                            console.log(value.name);
+                        });
+                        console.log(options);
+                        var attributeId = $("#country").find(':selected').attr('data-id');
+                        if (attributeId == "1") {
+                            $('#region').append(options);
+                            GetCity(CountryOptions.data[0].key);
+                        }
+                        else {
+                            $('#region').append('<option >No Region Of Selected Country</option>');
+                            $('#city-field').append(options);
+                        }
+                        console.log(attributeId);
+
+                    }
+                    else {
+
+                        console.log('No Record of Country:' + $('.nochildren').val());
+                    }
+
+                },
+                error: function () {
+
+
+                }
+
+            });
+        }
+       
+        $("#country").change(function () {
+            $("#city-field").empty();
+            $("#region").empty();
+            GetRegion(this.value)
+        });
+        $("#region").change(function () {
+            $("#city-field").empty();
+            GetCity(this.value);
+
+        });
+
+
+        jQuery.validator.addMethod("passwordCheck",
+        function(value, element, param) {
+            if (this.optional(element)) {
+                return true;
+            } else if (!/[A-Z]/.test(value)) {
+                return false;
+            } else if (!/[a-z]/.test(value)) {
+                return false;
+            } else if (!/[0-9]/.test(value)) {
+                return false;
+            }
+
+            return true;
+        },
+       val);
+         console.log(val);
+        function nextScreen(Source) {
+
+current_fs = $(Source).parent();
+next_fs = $(Source).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 600
+});
+        }
+    $(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 600
+});
+});
+        //Initial User Creation Script Start
+        var myForm = $("#intial-step-form");
+        var Initialvalidator =  myForm.validate({
+           rules: {
+               password: {
+                 required: true,
+                    minlength: 8,
+                   maxlength: 25
+
+               } ,
+               cfmpassword: {
+                    equalTo: "#password",
+                     minlength: 8,
+                     maxlength: 25
+                },
+               phone: {
+                  required:true,
+                  minlength:9,
+                  maxlength: 15,
+                  number: true
+                },
+                 email: {
+                  required:true,
+
+                },
+               messages:{
+
+      number:"Enter valid Email Address"
+  }
+                }
+        });
+
+        var myForm1 = $("#final_step_user_profile");
+        var Initialvalidator1 = myForm1.validate({
+            rules: {
+                first_name: {
+                    required: true
+
+                },
+                last_name: {
+                    required: true
+                },
+                dobday: {
+                   required: true
+                },
+                 dobmonth: {
+                   required: true
+                },
+                  dobyear: {
+                   required: true
+                },
+                terms_and_conditions:{
+                required: true
+        }
+
+
+
+                }
+        });
+
+        var di = $.parseHTML("Code has been send to user");
+        var d = $.parseHTML("Something went wrong");
+        $("#initialuser").click(function () {
+            if (myForm.valid()) {
+                //
+                var formdata = { username: $('#username').val(), Phone: $(".iti__selected-dial-code").text() + $('#phone').val(), Email: $('#email').val(), Password: $('#password').val() };
+                console.log(formdata);
+                $.ajax({
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      type: 'POST',
+                     // url: 'http://localhost:54384/v1/Accounts/register',
+                      url: siteurl+'/v1/Accounts/register',
+                      data: JSON.stringify(formdata),
+                      success: function (response) {
+                          if (response.status_code == 200) {
+                            console.log(di[0].textContent);
+                            Notifications(di[0].textContent, "success");
+                              $('#uid').val(response.data);
+                              $('#mobtext').text($('.iti__selected-dial-code').html()+$('#phone').val());
+                              nextScreen("#initialuser");
+                              console.log(response.code);
+                              $('#code').val(response.code);
+                          }
+                          else {
+                               if (response.message == "ok") {
+                                //nextScreen("#initialuser");
+                                Notifications(response.message, "success");
+                              }
+                               else {
+                                   $(".error-messages").css("display", "block");
+                                   $(".error-messages").html("Email Exist Try Again With Another Email");
+                                    $(".close-error-message").css("display","block");
+                                   setTimeout(function () {
+                                       $(".error-messages").slideToggle(500);
+                                       $(".close-error-message").hide();
+                                   }, 3000);
+                              //Notification("error", response.message);
+                               }
+                          }
+                      },
+                    error: function () {
+                        Notifications(d[0].textContent, "error");
+
+                      }
+                });
+                }
+        });
+        //Initial User Creation Script END
+
+        //Verify User Script Start
+        var VerifyForm = $("#second-step-form");
+        VerifyForm.validate();
+         VerifyForm.validate({
+           rules: {
+               code: {
+                 required: true,
+
+               }
+                },
+     messages:{
+
+     }
+
+        });
+        $("#verify").click(function () {
+            if (VerifyForm.valid()) {
+                 var verifydata = { userId:$('#uid').val(), code: $('#code').val() };
+                $.ajax({
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      type: 'POST',
+                   // url: 'http://localhost:54384/v1/Accounts/verify',
+                      url: siteurl+'/v1/Accounts/verify',
+                      data: JSON.stringify(verifydata),
+                      success: function (response) {
+                          if (response.status_code == 200) {
+                              if (response.message == "ok") {
+                                  nextScreen("#verify");
+                            $('.previous').prop('readonly', true);
+                              }
+                              else {
+                                  //Notification("success", response.message);
+                                  nextScreen("#verify");
+
+                              }
+                          }
+                          else {
+
+                               $(".error-messages").css("display","block");
+                              $(".error-messages").text("" + response.message);
+                              $(".close-error-message").css("display", "block");
+                              setTimeout(function () {
+                                  $(".error-messages").slideToggle(500);
+                                   $(".close-error-message").hide();
+                              }, 3000);
+                          }
+                      },
+                      error: function () {
+                          $(".error-messages").css("display", "block");
+                          $(".error-messages").html("Something went wrong");
+                          $(".close-error-message").css("display", "block");
+                          $(".close-success-message").hide();
+                          setTimeout(function () {
+                              $(".error-messages").slideToggle(500);
+                              $(".close-error-message").hide();
+
+                          }, 3000);
+                      }
+                });
+            }
+        });
+        //Verify User Script  End
+
+        //Update User Script Starts
+        var RemainingDetails = $("#final_step_user_profile");
+        RemainingDetails.validate();
+        $("#updateuser").click(function () {
+            if (RemainingDetails.valid()) {                              
+
+
+
+                var DOB = $('#dobyear').val() + "-" + $('#dobmonth').val() + "-" + $('#dobday').val() +"  17:15:45";
+                var CreatedDate = new Date(DOB);
+                var radioValue = $("input[name='gender']:checked").val();
+                var updatedata = { Id: $('#uid').val(), fullName: $('#first-name').val(), lastname: $('#last-name').val(), country: $('#country').val(), region: $('#region').val(), DateOfBirth: CreatedDate, city: $('#city-field').val(), distric: $('#district_name').val(), address: $('#address').val(), zipcode: $('#zip-code ').val(), gender: radioValue, IsActive: null };               
+
+                console.log(updatedata);
+                $.ajax({
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      type: 'POST',                  
+                       url: siteurl+'/v1/Accounts/UpdateUser',
+                      data: JSON.stringify(updatedata),
+                      success: function (response) {
+                          if (response) {
+                             
+                              //Notification("success", "User Created");
+                                nextScreen("#updateuser");
+                            //  window.location.href = '/Accounts/Login'
+
+                          }
+                          else {
+                             
+                              //Notification("error", "Invalid Code");
+                          }
+
+                      },
+                    error: function () {
+                      
+                          //Notification("error", "Something went wrong");
+                      }
+
+                });
+
+            }
+        });
+        //Update User Script End
+
+         //resend code
+        $("#resend").click(function () {
+            var resenddata = { email: $('#email').val() };
+            console.log(resenddata);
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: 'POST',
+               // url: 'http://localhost:54384/v1/Accounts/ResendCode',
+                url: siteurl+'/v1/Accounts/ResendCode',
+                data: JSON.stringify(resenddata),
+                success: function (response) {
+                    if (response) {
+                        console.log(response.data);
+                        $('#code').val(response.data);
+                          $(".error-messages").css("display","none");
+                        $(".success-messages").css("display", "block");
+                        $(".success-messages").html("Code has been send to user");
+                               $(".close-success-message").css("display","block");
+                              setTimeout(function () {
+                                  $(".success-messages").slideToggle(500);
+                                  $(".close-success-message").hide();
+                              }, 3000);
+                        //Notification("success", "User Created");
+                        //  nextScreen("#updateuser");
+                        //  window.location.href = '/Accounts/Login'
+
+                    }
+                    else {
+
+                        //Notification("error", "Invalid Code");
+                    }
+
+                },
+                error: function () {
+                    //Notification("error", "Something went wrong");
+                }
+
+            });
+
+        });
+         $( "#password,#cfmpassword" ).on( "copy cut paste drop", function() {
+    return false;
+    });
+    </script>
+   
+
+
+
+<script class="iti-load-utils" async="" src="./Malqaa_files/utils.js.download"></script>
+<script>
+        
+        FilePond.registerPlugin(
+	
+			// encodes the file as base64 data
+		  FilePondPluginFileEncode,
+			
+			// validates the size of the file
+			FilePondPluginFileValidateSize,
+			
+			// corrects mobile image orientation
+			FilePondPluginImageExifOrientation,
+			
+			// previews dropped images
+		  FilePondPluginImagePreview
+		);
+
+		// Select the file input and use create() to turn it into a pond
+		FilePond.create(
+			document.querySelector('.filepond')
+		);
+    </script>
+
+</body></html>

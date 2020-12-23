@@ -1,0 +1,3 @@
+//var siteurl = 'http://localhost:54384';
+var siteurl = 'http://212.24.104.23/api/';
+//var siteurl = "http://localhost/mazadapi/";
