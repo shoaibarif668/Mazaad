@@ -1,0 +1,14 @@
+Single item page
+home
+user-profile page
+user-watchlist
+user-favourite
+user-favourite---advertisment listing
+user-favourite---seller profile
+user-selling
+Listing items
+Registration
+Login
+Auction
+Business-Create Product
+
